@@ -1,0 +1,19 @@
+[package]
+name = "updater"
+version = "0.1.0"
+authors = ["Glenn Griffin <ggriffiniii@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = "0.9.19"
+#google_rest_api_generator = { git = "https://github.com/google-apis-rs/apis.git", path = "../../google-apis" }
+google_rest_api_generator = { path = "../../google-apis/google_rest_api_generator" }
+structopt = "0.2.18"
+serde = { version = "1", features = ["derive"] }
+log = "0.4.8"
+serde_json = "1"
+#discovery_parser = { git = "https://github.com/google-apis-rs/apis.git" }
+discovery_parser = { path = "../../google-apis/discovery_parser" }
+env_logger = "0.6.2"
