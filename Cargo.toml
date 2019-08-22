@@ -1,6 +1,6 @@
 [workspace]
-
 members = [
 	"updater",
-	"gen/*/",
 ]
+
+exclude = ["gen", "discovery_docs"]
