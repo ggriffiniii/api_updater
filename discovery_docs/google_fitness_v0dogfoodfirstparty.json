@@ -1,0 +1,2241 @@
+{
+  "kind": "discovery#restDescription",
+  "etag": "\"9eZ1uxVRThTDhLJCZHhqs3eQWz4/KmIxujCKICKATQwOF5RHc9QRByA\"",
+  "discoveryVersion": "v1",
+  "id": "fitness:v0dogfoodfirstparty",
+  "name": "fitness",
+  "canonicalName": null,
+  "fullyEncodeReservedExpansion": null,
+  "version": "v0dogfoodfirstparty",
+  "revision": "20190821",
+  "title": "Fitness",
+  "description": "Google Fit firstparty API",
+  "ownerDomain": "google.com",
+  "ownerName": "Google",
+  "icons": {
+    "x16": "https://www.gstatic.com/images/branding/product/1x/googleg_16dp.png",
+    "x32": "https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png"
+  },
+  "documentationLink": null,
+  "protocol": "rest",
+  "baseUrl": "https://www.googleapis.com/fitness/v0dogfoodfirstparty/users/",
+  "basePath": "/fitness/v0dogfoodfirstparty/users/",
+  "rootUrl": "https://www.googleapis.com/",
+  "servicePath": "fitness/v0dogfoodfirstparty/users/",
+  "batchPath": "batch/fitness/v0dogfoodfirstparty",
+  "version_module": null,
+  "packagePath": null,
+  "labels": null,
+  "features": null,
+  "parameters": {
+    "alt": {
+      "description": "Data format for the response.",
+      "default": "json",
+      "location": "query",
+      "required": false,
+      "type": "string",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [
+        "json"
+      ],
+      "enumDescriptions": [
+        "Responses with Content-Type of application/json"
+      ],
+      "repeated": false
+    },
+    "fields": {
+      "description": "Selector specifying which fields to include in a partial response.",
+      "default": null,
+      "location": "query",
+      "required": false,
+      "type": "string",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "repeated": false
+    },
+    "key": {
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+      "default": null,
+      "location": "query",
+      "required": false,
+      "type": "string",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "repeated": false
+    },
+    "oauth_token": {
+      "description": "OAuth 2.0 token for the current user.",
+      "default": null,
+      "location": "query",
+      "required": false,
+      "type": "string",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "repeated": false
+    },
+    "prettyPrint": {
+      "description": "Returns response with indentations and line breaks.",
+      "default": "true",
+      "location": "query",
+      "required": false,
+      "type": "boolean",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "repeated": false
+    },
+    "quotaUser": {
+      "description": "An opaque string that represents a user for quota purposes. Must not exceed 40 characters.",
+      "default": null,
+      "location": "query",
+      "required": false,
+      "type": "string",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "repeated": false
+    },
+    "userIp": {
+      "description": "Deprecated. Please use quotaUser instead.",
+      "default": null,
+      "location": "query",
+      "required": false,
+      "type": "string",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "repeated": false
+    }
+  },
+  "auth": null,
+  "schemas": {
+    "AccountStatus": {
+      "id": "AccountStatus",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "reason": {
+          "description": "If supported is false, indicates the reason why the account is not supported.",
+          "type": "string",
+          "format": null,
+          "enum": [
+            "unknownReason",
+            "unsupportedGoogleAppsUser"
+          ],
+          "enumDescriptions": [
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "supported": {
+          "description": "True if the account is supported.",
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "Application": {
+      "id": "Application",
+      "description": "",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "detailsUrl": {
+          "description": "An optional URI that can be used to link back to the application.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "name": {
+          "description": "The name of this application. This is required for REST clients, but we do not enforce uniqueness of this name. It is provided as a matter of convenience for other developers who would like to identify which REST created an Application or Data Source.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "packageName": {
+          "description": "Package name for this application. This is used as a unique identifier when created by Android applications, but cannot be specified by REST clients. REST clients will have their developer project number reflected into the Data Source data stream IDs, instead of the packageName.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "version": {
+          "description": "Version of the application. You should update this field whenever the application changes in a way that affects the computation of the data.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "ApplyDataPointChangesResponse": {
+      "id": "ApplyDataPointChangesResponse",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "fail": {
+          "description": "list of changes that failed to apply",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "DataPointChange"
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "DataPoint": {
+      "id": "DataPoint",
+      "description": "Represents a single data point, generated by a particular data source. A data point holds a value for each field, an end timestamp and an optional start time. The exact semantics of each of these attributes are specified in the documentation for the particular data type.\n\nA data point can represent an instantaneous measurement, reading or input observation, as well as averages or aggregates over a time interval. Check the data type documentation to determine which is the case for a particular data type.\n\nData points always contain one value for each field of the data type.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "computationTimeMillis": {
+          "description": "DO NOT USE THIS FIELD. It is ignored, and not stored.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "dataTypeName": {
+          "description": "The data type defining the format of the values in this data point.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "endTimeNanos": {
+          "description": "The end time of the interval represented by this data point, in nanoseconds since epoch.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "hiddenMetadata": {
+          "description": "Internal use only. If present, should be a serialized FitnessCommon.HiddenMetadata proto.",
+          "type": "string",
+          "format": "byte",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "modifiedTimeMillis": {
+          "description": "Indicates the last time this data point was modified. Useful only in contexts where we are listing the data changes, rather than representing the current state of the data.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "originDataSourceId": {
+          "description": "If the data point is contained in a dataset for a derived data source, this field will be populated with the data source stream ID that created the data point originally.\n\nWARNING: do not rely on this field for anything other than debugging. The value of this field, if it is set at all, is an implementation detail and is not guaranteed to remain consistent.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "rawTimestampNanos": {
+          "description": "The raw timestamp from the original SensorEvent.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "startTimeNanos": {
+          "description": "The start time of the interval represented by this data point, in nanoseconds since epoch.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "value": {
+          "description": "Values of each data type field for the data point. It is expected that each value corresponding to a data type field will occur in the same order that the field is listed with in the data type specified in a data source.\n\nOnly one of integer and floating point fields will be populated, depending on the format enum value within data source's type field.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "Value"
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "DataPointChange": {
+      "id": "DataPointChange",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "changeLogId": {
+          "description": "ID of the data point change in the local store, for simple deletion.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "changeTimestampMillis": {
+          "description": "Timestamp of when this change occurred.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "changeType": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "deletion",
+            "deletionByTime",
+            "insertion",
+            "unknown"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "dataPoint": {
+          "description": "Not used if change_type = DELETION_BY_TIME (but must remain required for backward-compatibility).",
+          "$ref": "DataPoint"
+        },
+        "dataSourceId": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "delete": {
+          "description": "Deprecated, prefer setting change_type. This must still be read as it is set by GMSCore v20 and earlier.",
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "deleteRange": {
+          "description": "Used when change_type = DELETION_BY_TIME.",
+          "$ref": "DeletionClosedTimeRange"
+        },
+        "retryCount": {
+          "description": null,
+          "type": "integer",
+          "format": "int32",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "DataPointChangeList": {
+      "id": "DataPointChangeList",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "change": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "DataPointChange"
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "DataSource": {
+      "id": "DataSource",
+      "description": "Definition of a unique source of sensor data. Data sources can expose raw data coming from hardware sensors on local or companion devices. They can also expose derived data, created by transforming or merging other data sources. Multiple data sources can exist for the same data type. Every data point inserted into or read from this service has an associated data source.\n\nThe data source contains enough information to uniquely identify its data, including the hardware device and the application that collected and/or transformed the data. It also holds useful metadata, such as the hardware and application versions, and the device type.\n\nEach data source produces a unique stream of data, with a unique identifier. Not all changes to data source affect the stream identifier, so that data collected by updated versions of the same application/device can still be considered to belong to the same data stream.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "application": {
+          "description": "Information about an application which feeds sensor data into the platform.",
+          "$ref": "Application"
+        },
+        "dataQualityStandard": {
+          "description": "DO NOT POPULATE THIS FIELD. It is never populated in responses from the platform, and is ignored in queries. It will be removed in a future version entirely.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "type": "string",
+            "format": null,
+            "enum": [
+              "dataQualityBloodGlucoseIso151972003",
+              "dataQualityBloodGlucoseIso151972013",
+              "dataQualityBloodPressureAami",
+              "dataQualityBloodPressureBhsAA",
+              "dataQualityBloodPressureBhsAB",
+              "dataQualityBloodPressureBhsBA",
+              "dataQualityBloodPressureBhsBB",
+              "dataQualityBloodPressureEsh2002",
+              "dataQualityBloodPressureEsh2010",
+              "dataQualityUnknown"
+            ],
+            "enumDescriptions": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "properties": {},
+            "additionalProperties": null,
+            "items": null
+          }
+        },
+        "dataStreamId": {
+          "description": "A unique identifier for the data stream produced by this data source. The identifier includes:\n\n \n- The physical device's manufacturer, model, and serial number (UID). \n- The application's package name or name. Package name is used when the data source was created by an Android application. The developer project number is used when the data source was created by a REST client. \n- The data source's type. \n- The data source's stream name.  Note that not all attributes of the data source are used as part of the stream identifier. In particular, the version of the hardware/the application isn't used. This allows us to preserve the same stream through version updates. This also means that two DataSource objects may represent the same data stream even if they're not equal.\n\nThe exact format of the data stream ID created by an Android application is: type:dataType.name:application.packageName:device.manufacturer:device.model:device.uid:dataStreamName \n\nThe exact format of the data stream ID created by a REST client is: type:dataType.name:developer project number:device.manufacturer:device.model:device.uid:dataStreamName \n\nWhen any of the optional fields that make up the data stream ID are absent, they will be omitted from the data stream ID. The minimum viable data stream ID would be: type:dataType.name:developer project number\n\nFinally, the developer project number is obfuscated when read by any REST or Android client that did not create the data source. Only the data source creator will see the developer project number in clear and normal form.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "dataStreamName": {
+          "description": "The stream name uniquely identifies this particular data source among other data sources of the same type from the same underlying producer. Setting the stream name is optional, but should be done whenever an application exposes two streams for the same data type, or when a device has two equivalent sensors.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "dataType": {
+          "description": "The data type defines the schema for a stream of data being collected by, inserted into, or queried from the Fitness API.",
+          "$ref": "DataType"
+        },
+        "device": {
+          "description": "Representation of an integrated device (such as a phone or a wearable) that can hold sensors.",
+          "$ref": "Device"
+        },
+        "name": {
+          "description": "An end-user visible name for this data source.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "type": {
+          "description": "A constant describing the type of this data source. Indicates whether this data source produces raw or derived data.",
+          "type": "string",
+          "format": null,
+          "enum": [
+            "cleaned",
+            "converted",
+            "derived",
+            "raw"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "DataSourceChange": {
+      "id": "DataSourceChange",
+      "description": "Next id: 5",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "changeTimestampMillis": {
+          "description": "Timestamp of when this change occurred.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "deleteDataSourceId": {
+          "description": "Delete a data source. The data source must contain no data points.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "purgeDataSourceId": {
+          "description": "Delete a data source and all data points it contains.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "upsertDataSource": {
+          "description": "Create a new data source if it does not already exist.",
+          "$ref": "DataSource"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "DataSourceChangeList": {
+      "id": "DataSourceChangeList",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "change": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "DataSourceChange"
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "DataType": {
+      "id": "DataType",
+      "description": "",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "field": {
+          "description": "A field represents one dimension of a data type.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "DataTypeField"
+          }
+        },
+        "name": {
+          "description": "Each data type has a unique, namespaced, name. All data types in the com.google namespace are shared as part of the platform.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "DataTypeField": {
+      "id": "DataTypeField",
+      "description": "In case of multi-dimensional data (such as an accelerometer with x, y, and z axes) each field represents one dimension. Each data type field has a unique name which identifies it. The field also defines the format of the data (int, float, etc.).\n\nThis message is only instantiated in code and not used for wire comms or stored in any way.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "format": {
+          "description": "The different supported formats for each field in a data type.",
+          "type": "string",
+          "format": null,
+          "enum": [
+            "blob",
+            "floatList",
+            "floatPoint",
+            "integer",
+            "integerList",
+            "map",
+            "string"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "name": {
+          "description": "Defines the name and format of data. Unlike data type names, field names are not namespaced, and only need to be unique within the data type.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "optional": {
+          "description": null,
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "DeleteHistory": {
+      "id": "DeleteHistory",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "endMillis": {
+          "description": null,
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "DeleteHistoryRequest": {
+      "id": "DeleteHistoryRequest",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "alsoDeleteAppData": {
+          "description": "Never set. Do not use.",
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "DeletionClosedTimeRange": {
+      "id": "DeletionClosedTimeRange",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "endTimeNanos": {
+          "description": "Inclusive.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "startTimeNanos": {
+          "description": "Inclusive.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "Device": {
+      "id": "Device",
+      "description": "Representation of an integrated device (such as a phone or a wearable) that can hold sensors. Each sensor is exposed as a data source.\n\nThe main purpose of the device information contained in this class is to identify the hardware of a particular data source. This can be useful in different ways, including:  \n- Distinguishing two similar sensors on different devices (the step counter on two nexus 5 phones, for instance)\n- Display the source of data to the user (by using the device make / model)\n- Treat data differently depending on sensor type (accelerometers on a watch may give different patterns than those on a phone)\n- Build different analysis models for each device/version.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "manufacturer": {
+          "description": "Manufacturer of the product/hardware.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "model": {
+          "description": "End-user visible model name for the device.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "platformType": {
+          "description": "",
+          "type": "string",
+          "format": null,
+          "enum": [
+            "platformTypeAndroid",
+            "platformTypeBle",
+            "platformTypeUnknown"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "type": {
+          "description": "A constant representing the type of the device.",
+          "type": "string",
+          "format": null,
+          "enum": [
+            "chestStrap",
+            "headMounted",
+            "phone",
+            "scale",
+            "tablet",
+            "unknown",
+            "watch"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "uid": {
+          "description": "The serial number or other unique ID for the hardware. This field is obfuscated when read by any REST or Android client that did not create the data source. Only the data source creator will see the uid field in clear and normal form.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "version": {
+          "description": "Version string for the device hardware/software.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "ListDataPointChangesResponse": {
+      "id": "ListDataPointChangesResponse",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "dataSource": {
+          "description": "The data source for the data protos. Used when sending responses back to Wear.",
+          "$ref": "DataSource"
+        },
+        "deleteRange": {
+          "description": "Delete these time ranges on the client",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "TimeRange"
+          }
+        },
+        "deletedDataPoint": {
+          "description": "Data points that have been removed and will not be included in any other request for dataset contents.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "DataPoint"
+          }
+        },
+        "insertedDataPoint": {
+          "description": "Data points listed.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "DataPoint"
+          }
+        },
+        "nextPageToken": {
+          "description": "The continuation token, which is used to page through large result sets. Provide this value in a subsequent request to return the next page of results. Note that this is also used as a \"sync token\" to retrieve changes after the last sync occurred. Syncing terminates when an empty response (no insertions/deletions) is returned.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "noMoreChanges": {
+          "description": "Whether the sync is done, i.e. there is no more data to request.",
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "ListDataPointsResponse": {
+      "id": "ListDataPointsResponse",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "dataPoints": {
+          "description": "Data points listed in reverse end_time order.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "DataPoint"
+          }
+        },
+        "deletedDataPoints": {
+          "description": "Data points that have been removed and will not be included in any other request for dataset contents. This field is deprecated and never populated in outgoing responses.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "DataPoint"
+          }
+        },
+        "nextPageToken": {
+          "description": "The continuation token, which is used to page through large result sets. Provide this value in a subsequent request to return the next page of results.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "MapValue": {
+      "id": "MapValue",
+      "description": "Holder object for the value of an entry in a map field of a data point.\n\nA map value supports a subset of the formats that the regular Value supports.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "fpVal": {
+          "description": "Floating point value.",
+          "type": "number",
+          "format": "double",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "PurgeDataSourcesRequest": {
+      "id": "PurgeDataSourcesRequest",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "dataSourceId": {
+          "description": "List of data source IDs which are to be deleted. For GMS < v24, the dataSourceId will be interpreted as a purge request for the contained *type*; that is, a purge for `raw:com.google.height:com.google.android.apps.fitness:user_input` will purge all sources of type `com.google.height`.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "type": "string",
+            "format": null,
+            "enum": [],
+            "enumDescriptions": [],
+            "properties": {},
+            "additionalProperties": null,
+            "items": null
+          }
+        },
+        "dataTypeName": {
+          "description": "List of data type names for which we should purge all of the sources.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "type": "string",
+            "format": null,
+            "enum": [],
+            "enumDescriptions": [],
+            "properties": {},
+            "additionalProperties": null,
+            "items": null
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "Session": {
+      "id": "Session",
+      "description": "Sessions contain metadata, such as a user-friendly name and time interval information.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "activityType": {
+          "description": "The type of activity this session represents.",
+          "type": "integer",
+          "format": "int32",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "application": {
+          "description": "The application that created the session.",
+          "$ref": "Application"
+        },
+        "description": {
+          "description": "A description for this session.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "endTimeMillis": {
+          "description": "An end time, in milliseconds since epoch, inclusive.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "id": {
+          "description": "A client-generated identifier that is unique across all sessions owned by this particular user.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "modifiedTimeMillis": {
+          "description": "A timestamp that indicates when the session was last modified.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "name": {
+          "description": "A human readable name of the session.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "startTimeMillis": {
+          "description": "A start time, in milliseconds since epoch, inclusive.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "SessionChange": {
+      "id": "SessionChange",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "changeLogId": {
+          "description": "ID of the session change log in the local store, for simple deletion.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "changeTimestampMillis": {
+          "description": "Timestamp of when this change occured.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "deleteSession": {
+          "description": "The full session we're deleting.",
+          "$ref": "Session"
+        },
+        "deleteSessionId": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "packageName": {
+          "description": "Package of the session we're deleting.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "upsertSession": {
+          "description": null,
+          "$ref": "Session"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "SessionChangeList": {
+      "id": "SessionChangeList",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "change": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "SessionChange"
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "SyncDataSourcesResponse": {
+      "id": "SyncDataSourcesResponse",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "deleteHistory": {
+          "description": "TODO(ricebin): move this to BulkSync rpc",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "DeleteHistory"
+          }
+        },
+        "fail": {
+          "description": "list of DataSource that failed to upsert",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "DataSourceChange"
+          }
+        },
+        "insertion": {
+          "description": "list of new DataSource that the client should insert TODO(ricebin): rename to change",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "DataSourceChange"
+          }
+        },
+        "nextPageToken": {
+          "description": "The continuation token which should be sent with the next SyncDataSourcesRequest. Historic detail: integers were concatenated to the end of this token (e.g. \"1234567890,1,2\" to denote resyncs which should occur once. If this is reimplemented, the next one should be 6.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "SyncSessionsResponse": {
+      "id": "SyncSessionsResponse",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "fail": {
+          "description": "list of Session that failed to upsert",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "SessionChange"
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "TimeCut": {
+      "id": "TimeCut",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "inclusive": {
+          "description": null,
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "millis": {
+          "description": null,
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "TimeRange": {
+      "id": "TimeRange",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "endTime": {
+          "description": null,
+          "$ref": "TimeCut"
+        },
+        "startTime": {
+          "description": null,
+          "$ref": "TimeCut"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "Value": {
+      "id": "Value",
+      "description": "Holder object for the value of a single field in a data point.\n\nA field value has a particular format and is only ever set to one of an integer or a floating point value. LINT.IfChange",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "blob": {
+          "description": null,
+          "type": "string",
+          "format": "byte",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "floatListVal": {
+          "description": "Float list value. When this is set, other values must not be set.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "type": "number",
+            "format": "float",
+            "enum": [],
+            "enumDescriptions": [],
+            "properties": {},
+            "additionalProperties": null,
+            "items": null
+          }
+        },
+        "fpVal": {
+          "description": "Floating point value. When this is set, other values must not be set.",
+          "type": "number",
+          "format": "double",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "intListVal": {
+          "description": "Integer list value. When this is set, other values must not be set.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "type": "integer",
+            "format": "int32",
+            "enum": [],
+            "enumDescriptions": [],
+            "properties": {},
+            "additionalProperties": null,
+            "items": null
+          }
+        },
+        "intVal": {
+          "description": "Integer value. When this is set, other values must not be set.",
+          "type": "integer",
+          "format": "int32",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "isUnset": {
+          "description": "Set to true when the value is unset. Needed since, without reftypes, zero and unset would look the same.",
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "mapVal": {
+          "description": "Map value. The valid key space and units for the corresponding value of each entry should be documented as part of the data type definition. Keys should be kept small whenever possible. Data streams with large keys and high data frequency may be down sampled.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "ValueMapValEntry"
+          }
+        },
+        "stringVal": {
+          "description": "String value. When this is set, other values must not be set. Strings should be kept small whenever possible. Data streams with large string values and high data frequency may be down sampled.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "ValueMapValEntry": {
+      "id": "ValueMapValEntry",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "key": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "value": {
+          "description": null,
+          "$ref": "MapValue"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    }
+  },
+  "resources": {
+    "users": {
+      "resources": {
+        "dataSources": {
+          "resources": {
+            "dataPointChanges": {
+              "resources": {},
+              "methods": {
+                "list": {
+                  "id": "fitness.users.dataSources.dataPointChanges.list",
+                  "path": "{userId}/dataSources/{dataSourceId}/dataPointChanges",
+                  "httpMethod": "GET",
+                  "description": "TODO(jdwan): Remove this rpc after releasing the same rpc (with reduced fields) to 3p and after migrating 1p callers to use the 3p proto. results ordered by descending end_time",
+                  "parameters": {
+                    "currentTimeMillis": {
+                      "description": "The client's current time",
+                      "default": null,
+                      "location": "query",
+                      "required": false,
+                      "type": "string",
+                      "format": "int64",
+                      "minimum": null,
+                      "maximum": null,
+                      "pattern": null,
+                      "enum": [],
+                      "enumDescriptions": [],
+                      "repeated": false
+                    },
+                    "dataSourceId": {
+                      "description": "The data stream ID of the data source that created the dataset.",
+                      "default": null,
+                      "location": "path",
+                      "required": true,
+                      "type": "string",
+                      "format": null,
+                      "minimum": null,
+                      "maximum": null,
+                      "pattern": null,
+                      "enum": [],
+                      "enumDescriptions": [],
+                      "repeated": false
+                    },
+                    "deduplicateChanges": {
+                      "description": "An indication of whether or not to de-duplicate the changes. If true, only one change per data point will be returned. If false, the full history of changes will be made available.",
+                      "default": null,
+                      "location": "query",
+                      "required": false,
+                      "type": "boolean",
+                      "format": null,
+                      "minimum": null,
+                      "maximum": null,
+                      "pattern": null,
+                      "enum": [],
+                      "enumDescriptions": [],
+                      "repeated": false
+                    },
+                    "header.serverToken": {
+                      "description": null,
+                      "default": null,
+                      "location": "query",
+                      "required": false,
+                      "type": "string",
+                      "format": null,
+                      "minimum": null,
+                      "maximum": null,
+                      "pattern": null,
+                      "enum": [],
+                      "enumDescriptions": [],
+                      "repeated": false
+                    },
+                    "header.userAgent": {
+                      "description": null,
+                      "default": null,
+                      "location": "query",
+                      "required": false,
+                      "type": "string",
+                      "format": null,
+                      "minimum": null,
+                      "maximum": null,
+                      "pattern": null,
+                      "enum": [],
+                      "enumDescriptions": [],
+                      "repeated": false
+                    },
+                    "minDatapoints": {
+                      "description": "If recent changes are empty, include at least x datapoints",
+                      "default": "0",
+                      "location": "query",
+                      "required": false,
+                      "type": "integer",
+                      "format": "int32",
+                      "minimum": null,
+                      "maximum": null,
+                      "pattern": null,
+                      "enum": [],
+                      "enumDescriptions": [],
+                      "repeated": false
+                    },
+                    "pageToken": {
+                      "description": "The continuation token, which is used to page through large result sets. To get the next page of results, set this parameter to the value of nextPageToken from the previous response.",
+                      "default": null,
+                      "location": "query",
+                      "required": false,
+                      "type": "string",
+                      "format": null,
+                      "minimum": null,
+                      "maximum": null,
+                      "pattern": null,
+                      "enum": [],
+                      "enumDescriptions": [],
+                      "repeated": false
+                    },
+                    "userId": {
+                      "description": "List data points for the person identified. Use \"me\" to indicate the authenticated user. Only \"me\" is supported at this time.",
+                      "default": null,
+                      "location": "path",
+                      "required": true,
+                      "type": "string",
+                      "format": null,
+                      "minimum": null,
+                      "maximum": null,
+                      "pattern": null,
+                      "enum": [],
+                      "enumDescriptions": [],
+                      "repeated": false
+                    }
+                  },
+                  "parameterOrder": [
+                    "userId",
+                    "dataSourceId"
+                  ],
+                  "request": null,
+                  "response": {
+                    "$ref": "ListDataPointChangesResponse"
+                  },
+                  "scopes": [],
+                  "supportsMediaDownload": false,
+                  "useMediaDownloadService": false,
+                  "supportsSubscription": false,
+                  "supportsMediaUpload": false,
+                  "mediaUpload": null
+                }
+              }
+            },
+            "datasets": {
+              "resources": {
+                "dataPoints": {
+                  "resources": {},
+                  "methods": {
+                    "list": {
+                      "id": "fitness.users.dataSources.datasets.dataPoints.list",
+                      "path": "{userId}/dataSources/{dataSourceId}/datasets/{datasetId}/dataPoints",
+                      "httpMethod": "GET",
+                      "description": "Data points within a dataset can be listed, but this method is primarily useful for listing data points that can be contained within any dataset, modified after a given time.",
+                      "parameters": {
+                        "currentTimeMillis": {
+                          "description": "The client's current time",
+                          "default": null,
+                          "location": "query",
+                          "required": false,
+                          "type": "string",
+                          "format": "int64",
+                          "minimum": null,
+                          "maximum": null,
+                          "pattern": null,
+                          "enum": [],
+                          "enumDescriptions": [],
+                          "repeated": false
+                        },
+                        "dataSourceId": {
+                          "description": "The data stream ID of the data source that created the dataset.",
+                          "default": null,
+                          "location": "path",
+                          "required": true,
+                          "type": "string",
+                          "format": null,
+                          "minimum": null,
+                          "maximum": null,
+                          "pattern": null,
+                          "enum": [],
+                          "enumDescriptions": [],
+                          "repeated": false
+                        },
+                        "datasetId": {
+                          "description": "Dataset identifier that is a composite of the min data point start time and max data point end time represented as nanoseconds from the epoch. The ID is formatted like: \"startTime-endTime\" where startTime and endTime are 64 bit integers.\n\nWill often be set to: \"*\" indicating the list operation can return results from any dataset.",
+                          "default": null,
+                          "location": "path",
+                          "required": true,
+                          "type": "string",
+                          "format": null,
+                          "minimum": null,
+                          "maximum": null,
+                          "pattern": null,
+                          "enum": [],
+                          "enumDescriptions": [],
+                          "repeated": false
+                        },
+                        "header.serverToken": {
+                          "description": null,
+                          "default": null,
+                          "location": "query",
+                          "required": false,
+                          "type": "string",
+                          "format": null,
+                          "minimum": null,
+                          "maximum": null,
+                          "pattern": null,
+                          "enum": [],
+                          "enumDescriptions": [],
+                          "repeated": false
+                        },
+                        "header.userAgent": {
+                          "description": null,
+                          "default": null,
+                          "location": "query",
+                          "required": false,
+                          "type": "string",
+                          "format": null,
+                          "minimum": null,
+                          "maximum": null,
+                          "pattern": null,
+                          "enum": [],
+                          "enumDescriptions": [],
+                          "repeated": false
+                        },
+                        "includeLatestN": {
+                          "description": "If specified, only the most recent N points will be included in the response.",
+                          "default": null,
+                          "location": "query",
+                          "required": false,
+                          "type": "string",
+                          "format": "int64",
+                          "minimum": null,
+                          "maximum": null,
+                          "pattern": null,
+                          "enum": [],
+                          "enumDescriptions": [],
+                          "repeated": false
+                        },
+                        "maxEndTimeMillis": {
+                          "description": "If specified, only data points with end time equal to or before this value value will be included.",
+                          "default": null,
+                          "location": "query",
+                          "required": false,
+                          "type": "string",
+                          "format": "int64",
+                          "minimum": null,
+                          "maximum": null,
+                          "pattern": null,
+                          "enum": [],
+                          "enumDescriptions": [],
+                          "repeated": false
+                        },
+                        "userId": {
+                          "description": "List data points for the person identified. Use \"me\" to indicate the authenticated user. Only \"me\" is supported at this time.",
+                          "default": null,
+                          "location": "path",
+                          "required": true,
+                          "type": "string",
+                          "format": null,
+                          "minimum": null,
+                          "maximum": null,
+                          "pattern": null,
+                          "enum": [],
+                          "enumDescriptions": [],
+                          "repeated": false
+                        }
+                      },
+                      "parameterOrder": [
+                        "userId",
+                        "dataSourceId",
+                        "datasetId"
+                      ],
+                      "request": null,
+                      "response": {
+                        "$ref": "ListDataPointsResponse"
+                      },
+                      "scopes": [],
+                      "supportsMediaDownload": false,
+                      "useMediaDownloadService": false,
+                      "supportsSubscription": false,
+                      "supportsMediaUpload": false,
+                      "mediaUpload": null
+                    }
+                  }
+                }
+              },
+              "methods": {}
+            }
+          },
+          "methods": {}
+        }
+      },
+      "methods": {
+        "applyDataPointChanges": {
+          "id": "fitness.users.applyDataPointChanges",
+          "path": "{userId}/applyDataPointChanges",
+          "httpMethod": "POST",
+          "description": null,
+          "parameters": {
+            "currentTimeMillis": {
+              "description": null,
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": "int64",
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "header.serverToken": {
+              "description": null,
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "header.userAgent": {
+              "description": null,
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "userId": {
+              "description": null,
+              "default": null,
+              "location": "path",
+              "required": true,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            }
+          },
+          "parameterOrder": [
+            "userId"
+          ],
+          "request": {
+            "$ref": "DataPointChangeList"
+          },
+          "response": {
+            "$ref": "ApplyDataPointChangesResponse"
+          },
+          "scopes": [],
+          "supportsMediaDownload": false,
+          "useMediaDownloadService": false,
+          "supportsSubscription": false,
+          "supportsMediaUpload": false,
+          "mediaUpload": null
+        },
+        "deleteHistory": {
+          "id": "fitness.users.deleteHistory",
+          "path": "{userId}/deleteHistory",
+          "httpMethod": "POST",
+          "description": null,
+          "parameters": {
+            "userId": {
+              "description": "Delete history for the person identified. Use \"me\" to indicate the authenticated user. Only \"me\" is supported at this time.",
+              "default": null,
+              "location": "path",
+              "required": true,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            }
+          },
+          "parameterOrder": [
+            "userId"
+          ],
+          "request": {
+            "$ref": "DeleteHistoryRequest"
+          },
+          "response": null,
+          "scopes": [],
+          "supportsMediaDownload": false,
+          "useMediaDownloadService": false,
+          "supportsSubscription": false,
+          "supportsMediaUpload": false,
+          "mediaUpload": null
+        },
+        "getAccountStatus": {
+          "id": "fitness.users.getAccountStatus",
+          "path": "{userId}/accountStatus",
+          "httpMethod": "GET",
+          "description": "Get the status of an account, can be used to determine whether the account is supported.",
+          "parameters": {
+            "header.serverToken": {
+              "description": null,
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "header.userAgent": {
+              "description": null,
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "userId": {
+              "description": null,
+              "default": null,
+              "location": "path",
+              "required": true,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            }
+          },
+          "parameterOrder": [
+            "userId"
+          ],
+          "request": null,
+          "response": {
+            "$ref": "AccountStatus"
+          },
+          "scopes": [],
+          "supportsMediaDownload": false,
+          "useMediaDownloadService": false,
+          "supportsSubscription": false,
+          "supportsMediaUpload": false,
+          "mediaUpload": null
+        },
+        "purgeDataSources": {
+          "id": "fitness.users.purgeDataSources",
+          "path": "{userId}/purgeDataSources",
+          "httpMethod": "POST",
+          "description": "Delete all data associated with specified data sources.",
+          "parameters": {
+            "userId": {
+              "description": "Delete history for the person identified. Use \"me\" to indicate the authenticated user. Only \"me\" is supported at this time.",
+              "default": null,
+              "location": "path",
+              "required": true,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            }
+          },
+          "parameterOrder": [
+            "userId"
+          ],
+          "request": {
+            "$ref": "PurgeDataSourcesRequest"
+          },
+          "response": null,
+          "scopes": [],
+          "supportsMediaDownload": false,
+          "useMediaDownloadService": false,
+          "supportsSubscription": false,
+          "supportsMediaUpload": false,
+          "mediaUpload": null
+        },
+        "syncDataSources": {
+          "id": "fitness.users.syncDataSources",
+          "path": "{userId}/syncDataSources",
+          "httpMethod": "POST",
+          "description": null,
+          "parameters": {
+            "currentTimeMillis": {
+              "description": null,
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": "int64",
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "header.serverToken": {
+              "description": null,
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "header.userAgent": {
+              "description": null,
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "lastSyncTimeMillis": {
+              "description": "TODO(ricebin): use page_token instead of last_sync_time_millis",
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": "int64",
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "pageToken": {
+              "description": null,
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "userId": {
+              "description": "Update the data source for the person identified. Use \"me\" to indicate the authenticated user. Only \"me\" is supported at this time.",
+              "default": null,
+              "location": "path",
+              "required": true,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            }
+          },
+          "parameterOrder": [
+            "userId"
+          ],
+          "request": {
+            "$ref": "DataSourceChangeList"
+          },
+          "response": {
+            "$ref": "SyncDataSourcesResponse"
+          },
+          "scopes": [],
+          "supportsMediaDownload": false,
+          "useMediaDownloadService": false,
+          "supportsSubscription": false,
+          "supportsMediaUpload": false,
+          "mediaUpload": null
+        },
+        "syncSessions": {
+          "id": "fitness.users.syncSessions",
+          "path": "{userId}/syncSessions",
+          "httpMethod": "POST",
+          "description": null,
+          "parameters": {
+            "currentTimeMillis": {
+              "description": null,
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": "int64",
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "header.serverToken": {
+              "description": null,
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "header.userAgent": {
+              "description": null,
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "userId": {
+              "description": "Update the data source for the person identified. Use \"me\" to indicate the authenticated user. Only \"me\" is supported at this time.",
+              "default": null,
+              "location": "path",
+              "required": true,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            }
+          },
+          "parameterOrder": [
+            "userId"
+          ],
+          "request": {
+            "$ref": "SessionChangeList"
+          },
+          "response": {
+            "$ref": "SyncSessionsResponse"
+          },
+          "scopes": [],
+          "supportsMediaDownload": false,
+          "useMediaDownloadService": false,
+          "supportsSubscription": false,
+          "supportsMediaUpload": false,
+          "mediaUpload": null
+        }
+      }
+    }
+  },
+  "methods": {}
+}

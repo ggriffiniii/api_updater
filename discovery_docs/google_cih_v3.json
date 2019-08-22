@@ -1,0 +1,2074 @@
+{
+  "kind": "discovery#restDescription",
+  "etag": "\"9eZ1uxVRThTDhLJCZHhqs3eQWz4/LmuenDCqKBnVGWWc1GVCrSVTmdg\"",
+  "discoveryVersion": "v1",
+  "id": "cih:v3",
+  "name": "cih",
+  "canonicalName": null,
+  "fullyEncodeReservedExpansion": null,
+  "version": "v3",
+  "revision": "20131022",
+  "title": "Customer Interaction History API",
+  "description": "Retrieving customer interactions API.",
+  "ownerDomain": "google.com",
+  "ownerName": "Google",
+  "icons": {
+    "x16": "https://www.gstatic.com/images/branding/product/1x/googleg_16dp.png",
+    "x32": "https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png"
+  },
+  "documentationLink": "https://sites.google.com/a/google.com/cih/engineering/eng-documents",
+  "protocol": "rest",
+  "baseUrl": "https://www.googleapis.com/cih/v3/",
+  "basePath": "/cih/v3/",
+  "rootUrl": "https://www.googleapis.com/",
+  "servicePath": "cih/v3/",
+  "batchPath": "batch/cih/v3",
+  "version_module": null,
+  "packagePath": null,
+  "labels": null,
+  "features": null,
+  "parameters": {
+    "alt": {
+      "description": "Data format for the response.",
+      "default": "json",
+      "location": "query",
+      "required": false,
+      "type": "string",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [
+        "json"
+      ],
+      "enumDescriptions": [
+        "Responses with Content-Type of application/json"
+      ],
+      "repeated": false
+    },
+    "fields": {
+      "description": "Selector specifying which fields to include in a partial response.",
+      "default": null,
+      "location": "query",
+      "required": false,
+      "type": "string",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "repeated": false
+    },
+    "key": {
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+      "default": null,
+      "location": "query",
+      "required": false,
+      "type": "string",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "repeated": false
+    },
+    "oauth_token": {
+      "description": "OAuth 2.0 token for the current user.",
+      "default": null,
+      "location": "query",
+      "required": false,
+      "type": "string",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "repeated": false
+    },
+    "prettyPrint": {
+      "description": "Returns response with indentations and line breaks.",
+      "default": "true",
+      "location": "query",
+      "required": false,
+      "type": "boolean",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "repeated": false
+    },
+    "quotaUser": {
+      "description": "An opaque string that represents a user for quota purposes. Must not exceed 40 characters.",
+      "default": null,
+      "location": "query",
+      "required": false,
+      "type": "string",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "repeated": false
+    },
+    "userIp": {
+      "description": "Deprecated. Please use quotaUser instead.",
+      "default": null,
+      "location": "query",
+      "required": false,
+      "type": "string",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "repeated": false
+    }
+  },
+  "auth": null,
+  "schemas": {
+    "AdoptionInteraction": {
+      "id": "AdoptionInteraction",
+      "description": "Contains the Adoption specific data for UserInteractions of type ADOPTION.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "latestTreatmentInstanceTimestamp": {
+          "description": "The timestamp, in microseconds since Epoch, of the latest treatment interaction that contributed to this adoption event.",
+          "type": "string",
+          "format": "uint64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "AdvertiserExperienceData": {
+      "id": "AdvertiserExperienceData",
+      "description": "Contains the Adoption specific data for UserInteractions of type ADOPTION from ADVERTISER_EXPERIENCE source.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "treatmentInstanceId": {
+          "description": "A list of adopted treatment instance ids. Will use for adoption event.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "type": "string",
+            "format": null,
+            "enum": [],
+            "enumDescriptions": [],
+            "properties": {},
+            "additionalProperties": null,
+            "items": null
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "AssociatedEmail": {
+      "id": "AssociatedEmail",
+      "description": "Contains AssociatedEmail structure fields.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "emailAddress": {
+          "description": "The email address.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "kind": {
+          "description": "Represents associated email structure data.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "operator": {
+          "description": "The program or person who initiated the operation.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "CasesData": {
+      "id": "CasesData",
+      "description": "Contains Cases Specific data stored in UserInteractions.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "agent": {
+          "description": "The agent who initiated this interaction.",
+          "$ref": "CasesInteractionSource"
+        },
+        "assignedGaia": {
+          "description": "The agent (Gaia ID) this case was assigned to at the point of this action.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "emailType": {
+          "description": "The type of the email. Only available for the user interaction of email type. Possible values: SUPPORT_EMAIL, MARKETING_EMAIL, SYSTEM_EMAIL, GRM_EMAIL, BOB_EMAIL.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "messageId": {
+          "description": "This ID will be globally unique even between different cases.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "state": {
+          "description": "The state of the case at the point when the interaction occurs. Possible values: NEW, ASSIGNED, UNASSIGNED, IN_CONSULT, NEED_INFO, SOLUTION_OFFERED, FINISHED, MERGED, DELETED, BLOCKED_BY.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "userId": {
+          "description": "The user id which is involved in the interaction.",
+          "$ref": "UserId"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "CasesInteractionSource": {
+      "id": "CasesInteractionSource",
+      "description": "Container for the entity responsible for adding or modifying a label, an attribute, or a message.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "id": {
+          "description": "Only routing rule can have multiple values. For systems like UDS this field is empty. Note: The id should be the gaia id if type == USER. If so, it is stored as contact_gaia_id in the enclosing UserInteraction proto.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "type": "string",
+            "format": null,
+            "enum": [],
+            "enumDescriptions": [],
+            "properties": {},
+            "additionalProperties": null,
+            "items": null
+          }
+        },
+        "type": {
+          "description": "Type of the source. Possible values: ROUTING_RULE, USER, API, EMAIL_PROC, CHAT_SUPPORT_BOT, OUTBOX_SENDER, UDS, MEDLEY, FINISHER, OUT_OF_OFFICE, ATLAS, CUF. For more info see //customer_support/cih/proto/cases_data.proto.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "ChatInteraction": {
+      "id": "ChatInteraction",
+      "description": "Contains the Chat specific data for UserInteractions of type GOAL.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {},
+      "additionalProperties": null,
+      "items": null
+    },
+    "EmailInteraction": {
+      "id": "EmailInteraction",
+      "description": "Contains the Email specific data for UserInteractions of type GOAL.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {},
+      "additionalProperties": null,
+      "items": null
+    },
+    "Entity": {
+      "id": "Entity",
+      "description": "Contains Entity structure fields.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "childEntity": {
+          "description": "Child entities of the Entity.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "Entity"
+          }
+        },
+        "deprecated": {
+          "description": "Indicates the entity opt out of the chief company bigtable",
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "entityId": {
+          "description": "The identifier associated with thie Entity. For ADWORDS_CID it is the customer id. For PARENT_COMPANY, CHILD_COMPANY, DIVISION or COMPANY it is the company id. For EMAIL it is the email address. For ADDRESS_DIGEST it is the SHA-1 digest of the email address.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "entityType": {
+          "description": "The type of the entity. Possible values: PARENT_COMPANY, CHILD_COMPANY, DIVISION, ADWORDS_CID, EMAIL, COMPANY, ADDRESS_DIGEST. For more info see: //customer_support/cih/proto/entity.proto.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "kind": {
+          "description": "Represents entity structure data.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "linkedByAdsdb": {
+          "description": "This flag is only available for any parent AdWords account entity of an email entity or any child email entity of an AdWords account entity. If the flag is true, the linkage of the AdWords account and the email is from the AdsDb. If the flag is false, it is from other sources such as gCases. Note, for either an AdWords account or an email, there is at most one linkage from AdsDb.",
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "parentEntity": {
+          "description": "Parent entities of the Entity.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "Entity"
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "GammaData": {
+      "id": "GammaData",
+      "description": "Contains the Gama specific data for UserInteractions from Gamma source.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "campaignId": {
+          "description": "Campaign id is the primary identifier for an email blast.",
+          "type": "integer",
+          "format": "int32",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "dispatchId": {
+          "description": "A dispatch is a particular mailing of a campaign.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "experimentId": {
+          "description": "Experiment id is a controlled variation on a particular dispatch of a campaign. It is being deprecated in favor of node id.",
+          "type": "integer",
+          "format": "int32",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "gammaProductId": {
+          "description": "GAMMA Product ID. For more info please see java/com/google/ads/crm/gamma/common/domain/Product.java",
+          "type": "integer",
+          "format": "int32",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "nodeId": {
+          "description": "A node is a controlled variation on a particular dispatch of a campaign.",
+          "type": "integer",
+          "format": "int32",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "uaid": {
+          "description": "UAID of the recipient of the email, if available.",
+          "$ref": "Uaid"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "GenieData": {
+      "id": "GenieData",
+      "description": "Contains Genie specific data for UserInteractions of from Genie source.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "enteredText": {
+          "description": "If type = REQUEST_RECOMMENDATION, store the user signals.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "sessionId": {
+          "description": "A join key for interactions, used to follow the user through multiple Genie interactions.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "type": {
+          "description": "Type of the Genie interaction. Possible values: REQUEST_RECOMMENDATION, SELECT_RECOMMENDATION, ENTER_TEXT, DISMISS_GENIE. For more info see: //customer_support/cih/proto/genie_data.proto.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "userAgent": {
+          "description": "User agent.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "userIp": {
+          "description": "The IP address of the user.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "GoalInteraction": {
+      "id": "GoalInteraction",
+      "description": "Contains the Goal specific data for UserInteractions of type GOAL.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "status": {
+          "description": "The status of goal interaction. Possible values: OPEN, WON, LOST, ABANDONED.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "GreenTeaData": {
+      "id": "GreenTeaData",
+      "description": "Contains all the specific fields for UserInteractions from GreenTea source.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "meetingMethodDetail": {
+          "description": "Additional information about the the meeting method (e.g. phone number, email address, hangout link). This is a copy of meeting_method_detail field in MeetingPB proto. The source of this field is a free-form text.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "opportunityId": {
+          "description": "PKs of Opportunity table.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "type": "string",
+            "format": "int64",
+            "enum": [],
+            "enumDescriptions": [],
+            "properties": {},
+            "additionalProperties": null,
+            "items": null
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "GrmData": {
+      "id": "GrmData",
+      "description": "Contains all the specific fields for UserInteractions from GRM source.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "agencyId": {
+          "description": "Some company ids represent real-world agencies to GRM. If the interaction applies to an agency this value will be set.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "contactLdap": {
+          "description": "The LDAP of the internal Google owner of this interaction.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "intentId": {
+          "description": "This field indicates the Interaction Intent. The intents are stored externally.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "type": "string",
+            "format": "int64",
+            "enum": [],
+            "enumDescriptions": [],
+            "properties": {},
+            "additionalProperties": null,
+            "items": null
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "HangoutInteraction": {
+      "id": "HangoutInteraction",
+      "description": "Contains the Phone specific data for UserInteractions of type HANGOUT.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {},
+      "additionalProperties": null,
+      "items": null
+    },
+    "HelpcenterData": {
+      "id": "HelpcenterData",
+      "description": "Contains the Helpcenter specific data for UserInteractions from Helpcenter source.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "internalHelpCenterName": {
+          "description": "Internal name is unique and maps to gKMS.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "isApiClient": {
+          "description": "Was purely API or from UI?",
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "referer": {
+          "description": "Referrer (http) for request.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "IncentiveInteraction": {
+      "id": "IncentiveInteraction",
+      "description": "Contains the Incentive specific data for UserInteractions of type INCENTIVE.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "monetaryReward": {
+          "description": "The data of monetary reward of coupon code",
+          "type": "object",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {
+            "amountMicros": {
+              "description": "Reward value represented in micros of the reward currency.",
+              "type": "string",
+              "format": "int64",
+              "enum": [],
+              "enumDescriptions": [],
+              "properties": {},
+              "additionalProperties": null,
+              "items": null
+            },
+            "currencyCode": {
+              "description": "Currency code as defined by Unicode's \"CLDR\", itself based on ISO 4217 (e.g., \"USD\").",
+              "type": "string",
+              "format": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "properties": {},
+              "additionalProperties": null,
+              "items": null
+            }
+          },
+          "additionalProperties": null,
+          "items": null
+        },
+        "type": {
+          "description": "The type of the Incentive Interaction. Possible values: COUPON_CODE_REDEEMED, REWARD_GRANTED, COUPON_CODE_REDEEMED_REWARD_GRANTED.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "IncentivesData": {
+      "id": "IncentivesData",
+      "description": "Contains IncentivesData structure fields.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "campaignId": {
+          "description": "Foreign keys of related objects within go/Incentives system. (Coupon code is sent as source_system_primary_key field).",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "couponId": {
+          "description": "The Id of the coupon.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "incentiveBatchId": {
+          "description": "The batch Id of the incentive.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "incentiveId": {
+          "description": "the Id of the incentive.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "MarketingEmailInteraction": {
+      "id": "MarketingEmailInteraction",
+      "description": "Contains Marketing data specific for marketing email UserInteractions.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "bounced": {
+          "description": "If false, the mail was delivered. If true, mail delivery may have been re-attempted but it is possible the mail never made it to the intended recipient.",
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "clicked": {
+          "description": "If true, one or more non-opt-out links in the email have been clicked and the opt-out link click has not been clicked.",
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "emailAddressDigest": {
+          "description": "SHA-1 Digest of the normalized destination (To:) email address. We don't store the raw address.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "fromAddress": {
+          "description": "The from address of the email.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "opened": {
+          "description": "If true, the email has been opened and the opt-out link click has not been clicked.",
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "optoutClicked": {
+          "description": "If true, the user clicked on the opt-out link in the email some time after the email was sent.",
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "type": {
+          "description": "Possible values: SENT, BOUNCED, OPENED, CLICKED, OPTOUT_CLICKED. For types other than SENT, the optional boolean field will be set to true, and the interaction timestamp will indicate the time of the post-send event. For SENT, the optional boolean fields reflect a summary of all post-send events and more than one may be true. Note: we might not have OPEN event even if the interaction is already opened and and clicked.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "MeetingInteraction": {
+      "id": "MeetingInteraction",
+      "description": "Contains the Meeting specific data to the Meeting UserInteractions.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "status": {
+          "description": "Meeting status. Possible values: CREATED, MODIFIED, DELETED.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "NoteInteraction": {
+      "id": "NoteInteraction",
+      "description": "Contains Note specific data for the Note UserInteractions.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "status": {
+          "description": "Note status. Possible values: CREATED, MODIFIED, DELETED.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "Participant": {
+      "id": "Participant",
+      "description": "Contains the Participant data.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "contactId": {
+          "description": "GreenTea contact id if the participant is a GreenTea contact.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "email": {
+          "description": "Participant's email. If the interaction included email address, e.g email message, this field contains the sanitized address used in this interaction. If the interaction did not have email address, this field will contain the email address for the first Profile returned by Focus Backend Service",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "familyName": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "gaiaId": {
+          "description": "GAIA id of the participant.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "givenName": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "name": {
+          "description": "Name of the participant. Depending on the source of interaction, the name may be either in unstructured or structured form.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "PartnerSearchData": {
+      "id": "PartnerSearchData",
+      "description": "Contains partner search specific data for UserInteractions.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {},
+      "additionalProperties": null,
+      "items": null
+    },
+    "PhoneInteraction": {
+      "id": "PhoneInteraction",
+      "description": "Contains the Phone specific data for UserInteractions of type GOAL.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {},
+      "additionalProperties": null,
+      "items": null
+    },
+    "TaskInteraction": {
+      "id": "TaskInteraction",
+      "description": "Contains Task specific data for UserInteractions of type TASK.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "status": {
+          "description": "Task status. Possible values: OPEN, CLOSED.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "TraxAgent": {
+      "id": "TraxAgent",
+      "description": "Contains the specific data for Trax Agent.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "email": {
+          "description": "The agent's email.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "gaiaId": {
+          "description": "The agent's gaia Id. It is an unobfuscated GaiaID.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "name": {
+          "description": "The agent's name.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "TraxData": {
+      "id": "TraxData",
+      "description": "Contains Trax specific data to the UserInteractions of type TRAX.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "actionType": {
+          "description": "The type of action that occurred. Possible values: NONE, INJECT, CLOSE, ASSIGN, ROUTE, EXPIRE, DELETE, OUTGOING_CONSULT, INCOMING_CONSULT, REPLY, REOPEN, BULK, UNBULK, BOUNCE, STIFLED_ACKNOWLEDGE, STIFLED_AUTO_RESPOND, CANCEL, MOVE, POSTPONE, SURVEY_SCHEDULED, SURVEY_SENT, CONSULT_INJECTED, MSG_SENT, LBL_APPLY, LBL_REMOVE, MOVE_IN. For more information see //customer_support/cih/proto/trax_data.proto.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "agent": {
+          "description": "Data of the agent that performed the action.",
+          "$ref": "TraxAgent"
+        },
+        "assignedAgent": {
+          "description": "For a reassign action, this is the agent that the ticket was assigned to.",
+          "$ref": "TraxAgent"
+        },
+        "messageId": {
+          "description": "The message Id.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "state": {
+          "description": "Trax state. Possible values: OPEN, CLOSED, PENDING, REOPENED, POSTPONED, BULKED, DELETED, DELAYED, WAITING, BROKEN, NEW, ASSIGNED, UNASSIGNED, IN_CONSULT, NEED_INFO, SOLUTION_OFFERED, FINISHED, MERGED. For more info see //customer_support/cih/proto/trax_data.proto.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "userId": {
+          "description": "The user Id of the ticket. It should contain email address for the TraxData.",
+          "$ref": "UserId"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "TraxInteraction": {
+      "id": "TraxInteraction",
+      "description": "Contains the Trax specific data for UserInteractions.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "type": {
+          "description": "The type of the Trax interaction. Possible values: EMAIL, PHONE, NOTE, CHAT, STUB.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "Uaid": {
+      "id": "Uaid",
+      "description": "CIH copy of the UAID proto. We don't store UAIDs as a 64-bit number instead we store them into two different fields: Product and Account Id. Account Id is string so it can be anything, for example in +Pages it's a Gaia Id.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "account_id": {
+          "description": "Account id.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "product": {
+          "description": "Product ID component of the UAID.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "UserCommData": {
+      "id": "UserCommData",
+      "description": "Contains UserComm specific data for UserInteractions.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {},
+      "additionalProperties": null,
+      "items": null
+    },
+    "UserId": {
+      "id": "UserId",
+      "description": "The user Id of the user interaction. At least one of the following three fields gaia_id, email, customer_id exists.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "customerId": {
+          "description": "customer id.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "email": {
+          "description": "email address.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "gaiaId": {
+          "description": "The unobfuscated Gaia id.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "name": {
+          "description": "The name.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "UserInteraction": {
+      "id": "UserInteraction",
+      "description": "The structure of UserInteractions.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "adoptionInteraction": {
+          "description": "available if the interaction is an ADOPTION type interaction.",
+          "$ref": "AdoptionInteraction"
+        },
+        "advertiserExperienceData": {
+          "description": "Contains Advertiser Experience data for interactions from ADVERTISER_EXPERIENCE origin.",
+          "$ref": "AdvertiserExperienceData"
+        },
+        "casesData": {
+          "description": "Contains Cases data for interactions from CASES origin.",
+          "$ref": "CasesData"
+        },
+        "chatInteraction": {
+          "description": "Available if the interaction is a CHAT type interaction.",
+          "$ref": "ChatInteraction"
+        },
+        "contactGaiaId": {
+          "description": "The Gaia ID of the primary Google Contact/CSR involved in this interaction. Only certain types of interactions and origin systems provide this information. It is a string of digits in base 10.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "customer": {
+          "description": "Google user or customer participant.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "Participant"
+          }
+        },
+        "detailedDescription": {
+          "description": "For detailed_description, only the first 512 characters are stored. If truncation was necessary, detailed_description_truncated will be true. Use the source_system_primarykey if necessary to refer back to the original object for more information rather than duplicating it.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "detailedDescriptionTruncated": {
+          "description": "Indicates if the detailedDescription is truncated.",
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "emailInteraction": {
+          "description": "Available if the interaction is an EMAIL type interaction.",
+          "$ref": "EmailInteraction"
+        },
+        "entity": {
+          "description": "Only entity_id and entity_type of the following field is set. parent_entity and child_entities are not used here.",
+          "$ref": "Entity"
+        },
+        "gammaData": {
+          "description": "Contains Gamma data for interactions from GAMMA origin.",
+          "$ref": "GammaData"
+        },
+        "genieData": {
+          "description": "Contains Genie data for interactions from GENIE origin.",
+          "$ref": "GenieData"
+        },
+        "goalInteraction": {
+          "description": "Available if the interaction is a GOAL type interaction.",
+          "$ref": "GoalInteraction"
+        },
+        "googler": {
+          "description": "Google participants. Can be full-time Googlers, interns, TVCs.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "Participant"
+          }
+        },
+        "greenTeaData": {
+          "description": "Contains Green Tea data for interactions from GREENTEA origin.",
+          "$ref": "GreenTeaData"
+        },
+        "grmData": {
+          "description": "Contains GRM data for interactions from GRM origin.",
+          "$ref": "GrmData"
+        },
+        "hangoutInteraction": {
+          "description": "available if the interaction is an HANGOUT type interaction.",
+          "$ref": "HangoutInteraction"
+        },
+        "helpcenterData": {
+          "description": "Contains Helpcenter data for interactions from HELPCENTER origin.",
+          "$ref": "HelpcenterData"
+        },
+        "incentiveInteraction": {
+          "description": "available if the interaction is an INCENTIVE type interaction.",
+          "$ref": "IncentiveInteraction"
+        },
+        "incentivesData": {
+          "description": "Contains Incentive data for interactions from INCENTIVES origin.",
+          "$ref": "IncentivesData"
+        },
+        "initiator": {
+          "description": "Initiator of the interaction.",
+          "$ref": "Participant"
+        },
+        "interactionOrigin": {
+          "description": "The origin of the interaction. This field with source_system_primary_key uniquely determines the foreign key. Possible values: GENIE_SOURCE, GRM_SOURCE, CASES_SOURCE, GAMMA_SOURCE, TRAX_SOURCE, HELPCENTER_SOURCE.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "interactionType": {
+          "description": "The type of the interaction. Possible values: STUB, PHONE, CHAT, EMAIL GOAL, TASK, NOTE, MEETING, MARKETING_EMAIL, TRAX, SUMMARY, HELPCENTER.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "kind": {
+          "description": "Kind of this resource.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "language": {
+          "description": "This stores a canonical language code as specified in go/iii. Use one of the converter classes (e.g. LanguageCode.forString()) to convert this to an enum.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "marketingEmailInteraction": {
+          "description": "Available if the interaction is a MARKETING_EMAIL type interaction.",
+          "$ref": "MarketingEmailInteraction"
+        },
+        "meetingInteraction": {
+          "description": "Available if the interaction is a MEETING type interaction.",
+          "$ref": "MeetingInteraction"
+        },
+        "metaType": {
+          "description": "Interaction classification for CRM use cases. See http://go/cih-gt-api for details.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "noteInteraction": {
+          "description": "Available if the interaction is a NOTE type interaction.",
+          "$ref": "NoteInteraction"
+        },
+        "otherParticipant": {
+          "description": "Other participant, such as maillist, GAIA group. May contain participants for which CIH was not able to determine if they are either Googler or Customer.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "Participant"
+          }
+        },
+        "partnerSearchData": {
+          "description": "Contains Partner Search data for interactions from PARTNERSEARCH origin.",
+          "$ref": "PartnerSearchData"
+        },
+        "phoneInteraction": {
+          "description": "Available if the interaction is a PHONE type interaction.",
+          "$ref": "PhoneInteraction"
+        },
+        "sourceSystemPrimaryKey": {
+          "description": "Primary key of the interaction.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "summary": {
+          "description": "If the interaction has one description, use summary. If it has a subject or summary and a longer description, use detailed_descripton for the body. For summary, only the first 128 characters are stored. If truncation was necessary, summary_truncated will be true.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "summaryTruncated": {
+          "description": "Indicates if the summary is truncated.",
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "taskInteraction": {
+          "description": "Available if the interaction is a TASK type interaction.",
+          "$ref": "TaskInteraction"
+        },
+        "timestamp": {
+          "description": "Timestamp of the interaction as the number of microseconds since the Epoch.",
+          "type": "string",
+          "format": "uint64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "traxData": {
+          "description": "Contains Trax data for interactions from TRAX origin.",
+          "$ref": "TraxData"
+        },
+        "traxInteraction": {
+          "description": "Available if the interaction is a TRAX type interaction.",
+          "$ref": "TraxInteraction"
+        },
+        "userCommData": {
+          "description": "Contains UserComm data for interactions from USERCOMM origin.",
+          "$ref": "UserCommData"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "UserInteractionsListResponse": {
+      "id": "UserInteractionsListResponse",
+      "description": "Response to UserInteractions.list. Contains Entity and UserInteraction data",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "entity": {
+          "description": "Entity structures to be returned.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "Entity"
+          }
+        },
+        "items": {
+          "description": "UserInteractions.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "UserInteraction"
+          }
+        },
+        "kind": {
+          "description": "Kind of this resource.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "nextPageToken": {
+          "description": "Token to pass in for pagination for the next page. Token is present only if more interactions are available.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    }
+  },
+  "resources": {
+    "associatedEmails": {
+      "resources": {},
+      "methods": {
+        "create": {
+          "id": "cih.associatedEmails.create",
+          "path": "associatedEmails/insert/{customerId}",
+          "httpMethod": "PUT",
+          "description": "Associates an AdWords customer id to an email address.",
+          "parameters": {
+            "customerId": {
+              "description": "The AdWords customer Id the email will be associated to.",
+              "default": null,
+              "location": "path",
+              "required": true,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            }
+          },
+          "parameterOrder": [
+            "customerId"
+          ],
+          "request": {
+            "$ref": "AssociatedEmail"
+          },
+          "response": {
+            "$ref": "AssociatedEmail"
+          },
+          "scopes": [],
+          "supportsMediaDownload": false,
+          "useMediaDownloadService": false,
+          "supportsSubscription": false,
+          "supportsMediaUpload": false,
+          "mediaUpload": null
+        },
+        "delete": {
+          "id": "cih.associatedEmails.delete",
+          "path": "associatedEmails/delete/{customerId}",
+          "httpMethod": "DELETE",
+          "description": "Dissociates an AdWords customer id from an email address.",
+          "parameters": {
+            "customerId": {
+              "description": "The AdWords customer Id the email will be dissociated from.",
+              "default": null,
+              "location": "path",
+              "required": true,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "emailAddress": {
+              "description": "The email address.",
+              "default": null,
+              "location": "query",
+              "required": true,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "operator": {
+              "description": "The program or person who initiated the operation.",
+              "default": null,
+              "location": "query",
+              "required": true,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            }
+          },
+          "parameterOrder": [
+            "customerId",
+            "emailAddress",
+            "operator"
+          ],
+          "request": null,
+          "response": null,
+          "scopes": [],
+          "supportsMediaDownload": false,
+          "useMediaDownloadService": false,
+          "supportsSubscription": false,
+          "supportsMediaUpload": false,
+          "mediaUpload": null
+        }
+      }
+    },
+    "userInteractions": {
+      "resources": {},
+      "methods": {
+        "get": {
+          "id": "cih.userInteractions.get",
+          "path": "userInteractions/{entityType}/{entityId}/{timestamp}/{interactionType}",
+          "httpMethod": "GET",
+          "description": "Gets an interaction.",
+          "parameters": {
+            "entityId": {
+              "description": "Represents the Id of the Entity whose interaction will be returned.",
+              "default": null,
+              "location": "path",
+              "required": true,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "entityType": {
+              "description": "Represents the Type of the entity whose interaction will be returned. Possible Values: COMPANY, ADWORDS_CID, EMAIL, ADDRESS_DIGEST, GAIA_ID.",
+              "default": null,
+              "location": "path",
+              "required": true,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "interactionType": {
+              "description": "The type of the interaction to be returned.",
+              "default": null,
+              "location": "path",
+              "required": true,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "timestamp": {
+              "description": "the timestamp of the interaction to be returned. It is measured as the number of microseconds since the Epoch.",
+              "default": null,
+              "location": "path",
+              "required": true,
+              "type": "string",
+              "format": "uint64",
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            }
+          },
+          "parameterOrder": [
+            "entityType",
+            "entityId",
+            "timestamp",
+            "interactionType"
+          ],
+          "request": null,
+          "response": {
+            "$ref": "UserInteraction"
+          },
+          "scopes": [],
+          "supportsMediaDownload": false,
+          "useMediaDownloadService": false,
+          "supportsSubscription": false,
+          "supportsMediaUpload": false,
+          "mediaUpload": null
+        },
+        "insert": {
+          "id": "cih.userInteractions.insert",
+          "path": "userInteractions/insert",
+          "httpMethod": "POST",
+          "description": "Inserts a new interaction to CIH.",
+          "parameters": {},
+          "parameterOrder": [],
+          "request": {
+            "$ref": "UserInteraction"
+          },
+          "response": {
+            "$ref": "UserInteraction"
+          },
+          "scopes": [],
+          "supportsMediaDownload": false,
+          "useMediaDownloadService": false,
+          "supportsSubscription": false,
+          "supportsMediaUpload": false,
+          "mediaUpload": null
+        },
+        "list": {
+          "id": "cih.userInteractions.list",
+          "path": "userInteractions",
+          "httpMethod": "GET",
+          "description": "Get a list of interactions for the given entity and its relatives if requested. The returned list is sorted by timestamp in descending order.",
+          "parameters": {
+            "entity": {
+              "description": "List of entities to retrieve. At least one item must be present. Each item must be in 'ENTITY_TYPE:ENTITY_ID' format which ENTITY_TYPE is COMPANY, ADWORDS_CID, EMAIL, ADDRESS_DIGEST or GAIA_ID.",
+              "default": null,
+              "location": "query",
+              "required": true,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": true
+            },
+            "entityFilter": {
+              "description": "Primary or secondary entities, if available only interactions whose primary or secondary entities are given are returned. For info about the format of this field see the comments of UserInteractionsApiaryFilter proto.",
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": true
+            },
+            "excludePassedInteractionOrigin": {
+              "description": "Indicates the inclusive or exclusive behavior of interactionOrigin field. See the description of interactionOrigin.",
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "boolean",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "excludePassedInteractionType": {
+              "description": "Indicates the inclusive or exclusive behavior of interactionType field. See the description of interactionType.",
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "boolean",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "includeRelatedInteractions": {
+              "description": "By default, all interactions which apply to any member of the entity structure which contains the provided entity are returned. If include_related_interactions is false, then only the interactions which are associated directly with this entity are returned, and neither parent_entity nor child_entities in the Entity object returned by this operation are populated.",
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "boolean",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "interactionOrigin": {
+              "description": "This limit is ignored if absent and all interactions regardless of their origin will be returned. Otherwise the meaning of this field depends on the include_interaction_origin field. 1. exclude_passed_interaction_origin is true: Only interactions whose Origin is contained in interaction_origin will be returned. 2. exclude_passed_interaction_origin is false: Only interactions whose Origin isn't contained in interaction_origin will be returned.",
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": true
+            },
+            "interactionType": {
+              "description": "This limit is ignored if absent and all interactions regardless of their type will be returned. Otherwise the meaning of this field depends on the exclude_passed_interaction_type field. 1. exclude_passed_interaction_type is true: Only interactions whose Type is contained in interaction_type will be returned. 2. exclude_passed_interaction_type is false: Only interactions whose Type isn't contained in interaction_type will be returned.",
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": true
+            },
+            "lookup_participant_info": {
+              "description": "Request to get additional information about interaction participants, such as names, email addresses. May increase latency of this call.",
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "boolean",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "maxInteractionsPerPage": {
+              "description": "The limit on the number of returned interactions. This is the maximum number of interactions which will be returned, starting with the most recent. Thie default value is 100. If it is equal to zero then only the entity structure is returned.",
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "integer",
+              "format": "int32",
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "maxResults": {
+              "description": "The maximum number of results per page.",
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "integer",
+              "format": "uint32",
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "metaTypeFilter": {
+              "description": "Represents the interaction's classification. Possible values: SALES, SUPPORT, MARKETING. For more info see http://go/cih-gt-api",
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": true
+            },
+            "minMainEntityInteractions": {
+              "description": "Attempt to read at least this many main entity interactions. The default value is set to 0. Pagination is disabled if a positive value is set.",
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "integer",
+              "format": "int32",
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "pageToken": {
+              "description": "The pagination token.",
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "phoneMatcher": {
+              "description": "If available only interactions whose phone number is given are returned. For info about the format of this field see the comments of UserInteractionsApiaryFilter proto.",
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": true
+            },
+            "timestampEnd": {
+              "description": "Upper limit on the timestamp for the returned interactions. It is measured as the number of microseconds since the Epoch.",
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": "uint64",
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "timestampStart": {
+              "description": "Lower limit on the timestamp for the returned interactions. It is measured as the number of microseconds since the Epoch.",
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": "uint64",
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            }
+          },
+          "parameterOrder": [
+            "entity"
+          ],
+          "request": null,
+          "response": {
+            "$ref": "UserInteractionsListResponse"
+          },
+          "scopes": [],
+          "supportsMediaDownload": false,
+          "useMediaDownloadService": false,
+          "supportsSubscription": false,
+          "supportsMediaUpload": false,
+          "mediaUpload": null
+        }
+      }
+    }
+  },
+  "methods": {}
+}

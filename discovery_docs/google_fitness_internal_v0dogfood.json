@@ -1,0 +1,4972 @@
+{
+  "kind": "discovery#restDescription",
+  "etag": "\"9eZ1uxVRThTDhLJCZHhqs3eQWz4/ZcAyDnQRlhs-2BAPRAA7Ehdx0UE\"",
+  "discoveryVersion": "v1",
+  "id": "fitness_internal:v0dogfood",
+  "name": "fitness_internal",
+  "canonicalName": null,
+  "fullyEncodeReservedExpansion": null,
+  "version": "v0dogfood",
+  "revision": "20190821",
+  "title": "Fitness Internal API",
+  "description": "Used for internal Fitness app data communication",
+  "ownerDomain": "google.com",
+  "ownerName": "Google",
+  "icons": {
+    "x16": "https://www.gstatic.com/images/branding/product/1x/googleg_16dp.png",
+    "x32": "https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png"
+  },
+  "documentationLink": null,
+  "protocol": "rest",
+  "baseUrl": "https://www.googleapis.com/fitness_internal/v0dogfood/",
+  "basePath": "/fitness_internal/v0dogfood/",
+  "rootUrl": "https://www.googleapis.com/",
+  "servicePath": "fitness_internal/v0dogfood/",
+  "batchPath": "batch/fitness_internal/v0dogfood",
+  "version_module": null,
+  "packagePath": null,
+  "labels": null,
+  "features": null,
+  "parameters": {
+    "alt": {
+      "description": "Data format for the response.",
+      "default": "json",
+      "location": "query",
+      "required": false,
+      "type": "string",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [
+        "json"
+      ],
+      "enumDescriptions": [
+        "Responses with Content-Type of application/json"
+      ],
+      "repeated": false
+    },
+    "fields": {
+      "description": "Selector specifying which fields to include in a partial response.",
+      "default": null,
+      "location": "query",
+      "required": false,
+      "type": "string",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "repeated": false
+    },
+    "key": {
+      "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+      "default": null,
+      "location": "query",
+      "required": false,
+      "type": "string",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "repeated": false
+    },
+    "oauth_token": {
+      "description": "OAuth 2.0 token for the current user.",
+      "default": null,
+      "location": "query",
+      "required": false,
+      "type": "string",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "repeated": false
+    },
+    "prettyPrint": {
+      "description": "Returns response with indentations and line breaks.",
+      "default": "true",
+      "location": "query",
+      "required": false,
+      "type": "boolean",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "repeated": false
+    },
+    "quotaUser": {
+      "description": "An opaque string that represents a user for quota purposes. Must not exceed 40 characters.",
+      "default": null,
+      "location": "query",
+      "required": false,
+      "type": "string",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "repeated": false
+    },
+    "userIp": {
+      "description": "Deprecated. Please use quotaUser instead.",
+      "default": null,
+      "location": "query",
+      "required": false,
+      "type": "string",
+      "format": null,
+      "minimum": null,
+      "maximum": null,
+      "pattern": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "repeated": false
+    }
+  },
+  "auth": null,
+  "schemas": {
+    "Capsule": {
+      "id": "Capsule",
+      "description": "Dashboard capsule object - represents a widget to display on the web dashboard.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "capsuleType": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "cityRank",
+            "goal",
+            "goalV2",
+            "graph",
+            "invite",
+            "notification",
+            "nutrition",
+            "personalRecord",
+            "session",
+            "singleMetric",
+            "today",
+            "unknownCapsuleType",
+            "weekly"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "cityRank": {
+          "description": null,
+          "$ref": "NotificationCityRankData"
+        },
+        "creationTimeMillis": {
+          "description": null,
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "id": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "notification": {
+          "description": null,
+          "$ref": "NotificationCapsuleConfig"
+        },
+        "personalRecord": {
+          "description": null,
+          "$ref": "PersonalRecordCapsuleConfig"
+        },
+        "singleMetric": {
+          "description": null,
+          "$ref": "SingleMetricCapsuleConfig"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "ChecksumChunk": {
+      "id": "ChecksumChunk",
+      "description": "NextId = 4",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "endMillis": {
+          "description": null,
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "startMillis": {
+          "description": null,
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "value": {
+          "description": null,
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "ChecksumChunkContainer": {
+      "id": "ChecksumChunkContainer",
+      "description": "NextId = 5",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "checksumChunks": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "ChecksumChunk"
+          }
+        },
+        "checksumType": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "aggregateStepCountDelta",
+            "datapointCount"
+          ],
+          "enumDescriptions": [
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "dataStreamId": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "isSubscribed": {
+          "description": null,
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "DataType": {
+      "id": "DataType",
+      "description": "",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "field": {
+          "description": "A field represents one dimension of a data type.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "DataTypeField"
+          }
+        },
+        "name": {
+          "description": "Each data type has a unique, namespaced, name. All data types in the com.google namespace are shared as part of the platform.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "DataTypeField": {
+      "id": "DataTypeField",
+      "description": "In case of multi-dimensional data (such as an accelerometer with x, y, and z axes) each field represents one dimension. Each data type field has a unique name which identifies it. The field also defines the format of the data (int, float, etc.).\n\nThis message is only instantiated in code and not used for wire comms or stored in any way.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "format": {
+          "description": "The different supported formats for each field in a data type.",
+          "type": "string",
+          "format": null,
+          "enum": [
+            "blob",
+            "floatList",
+            "floatPoint",
+            "integer",
+            "integerList",
+            "map",
+            "string"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "name": {
+          "description": "Defines the name and format of data. Unlike data type names, field names are not namespaced, and only need to be unique within the data type.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "optional": {
+          "description": null,
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "FavoriteActivities": {
+      "id": "FavoriteActivities",
+      "description": "NextId = 5",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "favoriteActivity": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "FavoriteActivity"
+          }
+        },
+        "sourceName": {
+          "description": "Identifies the source of the favorites data, e.g. \"web\", \"mobile\", \"system_default_v1\", etc.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "timestampMillis": {
+          "description": null,
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "version": {
+          "description": null,
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "FavoriteActivity": {
+      "id": "FavoriteActivity",
+      "description": "NextId = 3",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "color": {
+          "description": "The user selected color associated with the activity.",
+          "type": "string",
+          "format": null,
+          "enum": [
+            "first",
+            "fourth",
+            "second",
+            "third",
+            "unknownColor"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "fitnessActivity": {
+          "description": "The string form of the fitness platform?s activity, e.g. \"walking\", \"badminton\", etc. The list of activities can be found in j/c/g/wireless/android/fitness/constants/Activities.java.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "GetTimelineDataRequest": {
+      "id": "GetTimelineDataRequest",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "timeRange": {
+          "description": null,
+          "$ref": "GetTimelineDataRequestGetTimeRangeRequest"
+        },
+        "timeZoneId": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "userId": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "GetTimelineDataRequestGetTimeRangeRequest": {
+      "id": "GetTimelineDataRequestGetTimeRangeRequest",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "endTime": {
+          "description": null,
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "startTime": {
+          "description": null,
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "Goal": {
+      "id": "Goal",
+      "description": "NextId = 12",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "criteria": {
+          "description": "The criteria by which progress an achievement of this goal will be tracked. If unset, achievement must be marked manually.",
+          "$ref": "GoalAchievementCriteria"
+        },
+        "defaultGoal": {
+          "description": "Default goal created for the user during onboarding.",
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "description": {
+          "description": "Identifies the logic or notification source used to generate the goal. e.g. \"Custom goal...\", \"recommendation:goal:baseline_activity_duration\"",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "descriptionMsg": {
+          "description": "Deprecated. This description should not be surfaced in the UI. Reference to the TransConsole message id for the description.",
+          "$ref": "LocalizableMessage"
+        },
+        "endTimeMillis": {
+          "description": "The end or due date of the goal. This may be omitted for open- ended or cyclical goals.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "id": {
+          "description": "A unique identifier within the user?s account. Simply a hash of currentTime, gaiaID, id generation attempt, and toString() of the Goal object.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "parentGoalId": {
+          "description": "If this goal was created as a result of a longer term goal, we reference the parent goal here.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "startTimeMillis": {
+          "description": "Most goals are effective immediately so start time is effectively the creation time but this can be used to schedule a more discrete goal like a spinning workout for some time in the future.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "state": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "cancelled",
+            "completed",
+            "inProgress",
+            "planned",
+            "unknown"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "templateId": {
+          "description": "Reference to a global template for this goal type (e.g. ?take X steps per day?) which has the localizable message format as well as any preset field value (e.g. DAILY for achievement period in the example above).",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "timePeriod": {
+          "description": "The period of time over which the goal?s achievement criteria is measured and after which is the goal?s progress is reset.",
+          "$ref": "GoalTimePeriod"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "GoalAchievementCriteria": {
+      "id": "GoalAchievementCriteria",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "dataType": {
+          "description": "The xSensor name of the property to be tracked (e.g. ?com.google.step_count?)",
+          "$ref": "DataType"
+        },
+        "maxValue": {
+          "description": "Upper and lower bounds for the property values. Either may be unset depending on the criteria but at least one must be set.",
+          "type": "number",
+          "format": "double",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "minValue": {
+          "description": null,
+          "type": "number",
+          "format": "double",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "trendPeriod": {
+          "description": null,
+          "$ref": "GoalTimePeriod"
+        },
+        "type": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "cumulative",
+            "target",
+            "trend",
+            "unknown"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "GoalTimePeriod": {
+      "id": "GoalTimePeriod",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "count": {
+          "description": null,
+          "type": "integer",
+          "format": "int32",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "unit": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "day",
+            "hour",
+            "minute",
+            "month",
+            "second",
+            "unknown",
+            "week",
+            "year"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "GoalV2": {
+      "id": "GoalV2",
+      "description": "Represents a goal, to be contained in a DataPoint, of datatype com.google.internal.goal. The stream will be identified by a datasource id that is a combination of defining characteristics of the goal, e.g. datatype, period, activity, etc; use GoalStreams.getGoalStreamName(). Refer to go/fit-goals for usage examples. Currently used for both storage and service API. Next id: 10",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "cumulativeObjective": {
+          "description": "The goal objective, depending on which objective type is present, dictates how progress is calculated and which fields are applicable. Exactly one of these are required.",
+          "$ref": "GoalV2CumulativeObjective"
+        },
+        "dataTypeName": {
+          "description": "The metric that the goal tracks.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "endTimeNanos": {
+          "description": null,
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "filter": {
+          "description": "List of criteria that the data must meet in order to qualify for counting towards the goal.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "GoalV2Criteria"
+          }
+        },
+        "recurInterval": {
+          "description": "If this is a recurring goal, amount of time user has to achieve the goal before goal is reset and repeated. Unset if not a recurring goal. Optional.",
+          "$ref": "GoalV2TimePeriod"
+        },
+        "segmentObjective": {
+          "description": null,
+          "$ref": "GoalV2SegmentObjective"
+        },
+        "startTimeNanos": {
+          "description": "The start and end time represent the time at which the goal started to be active or inactive, but this goal may still be edited later on. The timestamps in the data stream represent goal edit timestamps, which will NOT be equal to the start and end time if the goal has been edited. For this reason, the key may not be unique within the data stream.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "streamId": {
+          "description": "The stream name under which this datapoint is stored.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "targetObjective": {
+          "description": null,
+          "$ref": "GoalV2TargetObjective"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "GoalV2Criteria": {
+      "id": "GoalV2Criteria",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "fieldName": {
+          "description": "A field name in the given DataType, OR special values ?duration? and ?activity?, which will be extracted from segment. Required.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "operator": {
+          "description": "The comparison operator to use on the value, when determining whether the criteria is met. Required.",
+          "type": "string",
+          "format": null,
+          "enum": [
+            "eq",
+            "gte",
+            "lte",
+            "unknownOperator"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "value": {
+          "description": "The value of the field, to use when determining whether the criteria is met. Required.",
+          "$ref": "Value"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "GoalV2CumulativeObjective": {
+      "id": "GoalV2CumulativeObjective",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "objective": {
+          "description": "Required.",
+          "$ref": "GoalV2Criteria"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "GoalV2SegmentObjective": {
+      "id": "GoalV2SegmentObjective",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "frequency": {
+          "description": "Number of segments that pass the filter criteria list.",
+          "type": "integer",
+          "format": "int32",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "GoalV2TargetObjective": {
+      "id": "GoalV2TargetObjective",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "initialvalue": {
+          "description": "Value at the start time of the goal, which we evaluate towards the objective value.",
+          "$ref": "Value"
+        },
+        "objective": {
+          "description": "Required.",
+          "$ref": "GoalV2Criteria"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "GoalV2TimePeriod": {
+      "id": "GoalV2TimePeriod",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "count": {
+          "description": null,
+          "type": "number",
+          "format": "double",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "unit": {
+          "description": "Required.",
+          "type": "string",
+          "format": null,
+          "enum": [
+            "day",
+            "month",
+            "unknownUnit",
+            "week",
+            "year"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "ListCapsulesResponse": {
+      "id": "ListCapsulesResponse",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "capsule": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "Capsule"
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "ListGoalsResponse": {
+      "id": "ListGoalsResponse",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "goals": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "Goal"
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "ListGoalsV2Response": {
+      "id": "ListGoalsV2Response",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "goals": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "GoalV2"
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "ListNotificationsResponse": {
+      "id": "ListNotificationsResponse",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "notifications": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "Notification"
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "ListSessionsResponse": {
+      "id": "ListSessionsResponse",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "session": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "TimelineSession"
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "LocalizableMessage": {
+      "id": "LocalizableMessage",
+      "description": "TransConsole message id and its placeholders. Next Id = 7",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "id": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "placeholder": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "LocalizableMessagePlaceholder"
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "LocalizableMessagePlaceholder": {
+      "id": "LocalizableMessagePlaceholder",
+      "description": "Only one placeholder object for each message placeholder. Each placeholder must contain only one of an int, float, date value, or string and must be named with a string.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "distanceMeters": {
+          "description": "Distances formatted as \"4.23 km\" or \"4.23 miles\". Note to clients: Always set the distance in meters and specify the length unit. If there is no length unit pref, the default for the user's locale will be chosen.",
+          "type": "number",
+          "format": "float",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "distanceMiles": {
+          "description": null,
+          "type": "number",
+          "format": "float",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "durationMillis": {
+          "description": "This will be formatted as a short duration like \"1 hr 13 min\"",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "fpVal": {
+          "description": null,
+          "type": "number",
+          "format": "float",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "intVal": {
+          "description": "Value of placeholder.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "lengthUnit": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "imperial",
+            "metric",
+            "unknownLengthUnit"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "name": {
+          "description": "Name of placeholder for messages like \"Take {STEPCOUNT} steps\" where \"STEPCOUNT\" is the name.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "strVal": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "timeMillis": {
+          "description": "This will be formatted as a short relative date eg. \"today\", \"Wed Aug 26\"",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "MapValue": {
+      "id": "MapValue",
+      "description": "Holder object for the value of an entry in a map field of a data point.\n\nA map value supports a subset of the formats that the regular Value supports.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "fpVal": {
+          "description": "Floating point value.",
+          "type": "number",
+          "format": "double",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "Notification": {
+      "id": "Notification",
+      "description": "NextId = 21.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "action": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "NotificationNotificationAction"
+          }
+        },
+        "blockable": {
+          "description": null,
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "cityRankData": {
+          "description": null,
+          "$ref": "NotificationCityRankData"
+        },
+        "condition": {
+          "description": null,
+          "$ref": "NotificationTriggerCondition"
+        },
+        "creationTimeMillis": {
+          "description": "Timestamp when this notification was generated.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "expirationTimeMillis": {
+          "description": "Date/time after which the clients should no longer display this notification.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "id": {
+          "description": "A unique identifier for capturing impression and response for this notification. Simply a hash of currentTime, gaia id, id generation attempt, and toString() of the Notification object.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "increaseGoalV2Data": {
+          "description": null,
+          "$ref": "NotificationIncreaseGoalV2Data"
+        },
+        "parentGoalId": {
+          "description": "If this notification was generated to support an existing goal we?ll capture that goal?s ID here.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "personalRecordData": {
+          "description": null,
+          "$ref": "NotificationPersonalRecordData"
+        },
+        "personalRecordIntroData": {
+          "description": null,
+          "$ref": "NotificationPersonalRecordIntroData"
+        },
+        "position": {
+          "description": null,
+          "$ref": "NotificationTimelinePosition"
+        },
+        "sourceDescription": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "sourceName": {
+          "description": "Identifies the logic used to generate the notification -- possibly with version.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "sourceTitle": {
+          "description": "The source title/description are used in the blocked notifications UI.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "uiModel": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "NotificationUiModel"
+          }
+        },
+        "viewEnum": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "alertCards",
+            "challengeCompletedCard",
+            "challengePendingCard",
+            "cityCard",
+            "createGoalCard",
+            "dialogAccountSwitch",
+            "dialogTurningArOn",
+            "emptyStateCard",
+            "emptyStateGoalsNoActivity",
+            "emptyStateNoGoals",
+            "featureHighlightActiveMode",
+            "featureHighlightTimeline",
+            "gotoTimelineCard",
+            "groupInviteCard",
+            "groupsCard",
+            "loadingCard",
+            "localNotificationActivityDetection",
+            "localNotificationDataCollectionOff",
+            "localNotificationDisengaged",
+            "localNotificationEngagement",
+            "localNotificationHighAccuracy",
+            "localNotificationLocationHistory",
+            "localNotificationLocationOff",
+            "localNotificationLocationPermissionOff",
+            "localNotificationMultipleIssues",
+            "localNotificationSyncOff",
+            "multiGoalCard",
+            "nmoreSessionsCard",
+            "notificationAchievementBike",
+            "notificationAchievementRun",
+            "notificationCard",
+            "notificationDefaultActivityGoal",
+            "notificationInsightRankingCity",
+            "notificationInsightUserDailyNutrition",
+            "notificationInsightUserTrendsMonthly",
+            "notificationInsightUserTrendsUpDaily",
+            "notificationPersonalRecordIntroduction",
+            "notificationSuggestionActivityMeetGoal",
+            "notificationSuggestionGoalBaseline",
+            "notificationSuggestionGoalIncrease",
+            "notificationSystemEstimatedDistance",
+            "notificationSystemM8Incompatible",
+            "notificationSystemSurvey",
+            "nutritionCard",
+            "onboardingBikeCarryPositionsCard",
+            "onboardingConnectedAppsCard",
+            "onboardingWalkCarryPositionsCard",
+            "personalRecordCard",
+            "personalRecordIntroCard",
+            "profileCompletionCard",
+            "sectionCard",
+            "sessionCard",
+            "sessionFromLocationCard",
+            "settingsApiCard",
+            "sharingEducation",
+            "singleGoalCard",
+            "sleepTrackingCard",
+            "summaryBarCard",
+            "syncProgressCard",
+            "sysNotificationEngagement",
+            "unknownView",
+            "weightTrackingCard",
+            "workoutSummaryMapView"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "NotificationCapsuleConfig": {
+      "id": "NotificationCapsuleConfig",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "notification": {
+          "description": null,
+          "$ref": "Notification"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "NotificationCityRankData": {
+      "id": "NotificationCityRankData",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "activeTimeMillis": {
+          "description": null,
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "city": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "percentile": {
+          "description": "Percentile expressed as a number between 0 and 100.",
+          "type": "number",
+          "format": "double",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "population": {
+          "description": null,
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "steps": {
+          "description": null,
+          "type": "number",
+          "format": "double",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "NotificationIncreaseGoalV2Data": {
+      "id": "NotificationIncreaseGoalV2Data",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "currentGoal": {
+          "description": null,
+          "$ref": "GoalV2"
+        },
+        "recommendedGoal": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "GoalV2"
+          }
+        },
+        "recommendedValue": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "type": "string",
+            "format": "int64",
+            "enum": [],
+            "enumDescriptions": [],
+            "properties": {},
+            "additionalProperties": null,
+            "items": null
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "NotificationNotificationAction": {
+      "id": "NotificationNotificationAction",
+      "description": "A log of all of the actions the user/client has performed on this notification.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "action": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "accepted",
+            "blocked",
+            "dismissed",
+            "displayed"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "actionTimeMillis": {
+          "description": null,
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "NotificationPersonalRecordData": {
+      "id": "NotificationPersonalRecordData",
+      "description": "NextId = 4;",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "previousValue": {
+          "description": null,
+          "type": "number",
+          "format": "double",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "sessionStartMillis": {
+          "description": null,
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "value": {
+          "description": "In millis for time and meters for distance.",
+          "type": "number",
+          "format": "double",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "NotificationPersonalRecordIntroData": {
+      "id": "NotificationPersonalRecordIntroData",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "bikeDistance": {
+          "description": null,
+          "$ref": "NotificationPersonalRecordData"
+        },
+        "bikeDuration": {
+          "description": null,
+          "$ref": "NotificationPersonalRecordData"
+        },
+        "runDistance": {
+          "description": null,
+          "$ref": "NotificationPersonalRecordData"
+        },
+        "runDuration": {
+          "description": null,
+          "$ref": "NotificationPersonalRecordData"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "NotificationStatus": {
+      "id": "NotificationStatus",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "actionTimeMillis": {
+          "description": null,
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "notificationId": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "rating": {
+          "description": null,
+          "type": "number",
+          "format": "double",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "sourceName": {
+          "description": "Identifies the notification module; we may want to allow some wild carding so the user can squelch entire categories of notification.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "status": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "accepted",
+            "blocked",
+            "deprecatedComplete",
+            "dismissed",
+            "localOnly",
+            "noStatus",
+            "systemCancel",
+            "visible"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "NotificationTimelinePosition": {
+      "id": "NotificationTimelinePosition",
+      "description": "Controls where in the timeline a notification should be shown to the user.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "specialPosition": {
+          "description": "Show in a fixed position in the timeline.",
+          "type": "string",
+          "format": null,
+          "enum": [
+            "top"
+          ],
+          "enumDescriptions": [
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "timestampMillis": {
+          "description": "Show in a specific spot in the timeline denoted by a timestamp.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "NotificationTriggerCondition": {
+      "id": "NotificationTriggerCondition",
+      "description": "Controls when a notification should be shown to the user.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "booleanGservicesKey": {
+          "description": "NOTE: the following trigger conditions were added for Bolt (2015104000+). The app will use the key specified to decide whether to trigger. It will trigger if the value is true, suppress if the value is false.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "caloriesExpendedLockedState": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "locked",
+            "unlocked",
+            "unspecified"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "client": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "mobileAndTablet",
+            "web"
+          ],
+          "enumDescriptions": [
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "distanceLockedState": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "locked",
+            "unlocked",
+            "unspecified"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "endTimeMillis": {
+          "description": null,
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "startTimeMillis": {
+          "description": "A time time interval within which this notification is relevant.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "supportedMode": {
+          "description": "Ordinal of FitnessMode.java enum. What modes should this notification be displayed in? If empty, we assume all modes.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "type": "integer",
+            "format": "int32",
+            "enum": [],
+            "enumDescriptions": [],
+            "properties": {},
+            "additionalProperties": null,
+            "items": null
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "NotificationUiModel": {
+      "id": "NotificationUiModel",
+      "description": "NotificationUiModels are what the clients use to display. Next id: 22.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "additionalMessage": {
+          "description": "Each of these additional messages will appear on separate lines in the body of a notification",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "type": "string",
+            "format": null,
+            "enum": [],
+            "enumDescriptions": [],
+            "properties": {},
+            "additionalProperties": null,
+            "items": null
+          }
+        },
+        "additionalMessageMsg": {
+          "description": "Order of these message ids should correspond to those in additional_message. They are used only on the server side for localization.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "LocalizableMessage"
+          }
+        },
+        "button": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "NotificationUiModelButton"
+          }
+        },
+        "dismissible": {
+          "description": "Whether or not the user can dismiss this notification (via a swipe or other UI action).",
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "footnote": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "footnoteMsg": {
+          "description": null,
+          "$ref": "LocalizableMessage"
+        },
+        "graph": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "NotificationUiModelGraph"
+          }
+        },
+        "icon": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "assignment",
+            "biking",
+            "goal",
+            "highAccuracy",
+            "nutrition",
+            "otherActivity",
+            "playStore",
+            "profile",
+            "running",
+            "settings",
+            "trend",
+            "trophy",
+            "walking"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "intent": {
+          "description": null,
+          "$ref": "NotificationUiModelIntent"
+        },
+        "message": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "messageMsg": {
+          "description": null,
+          "$ref": "LocalizableMessage"
+        },
+        "options": {
+          "description": null,
+          "$ref": "NotificationUiModelOptions"
+        },
+        "primaryColor": {
+          "description": "If provided, sets the title and button colors. If not provided, we get the color from the icon or activity type.",
+          "type": "integer",
+          "format": "int32",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "recommendation": {
+          "description": null,
+          "$ref": "NotificationUiModelRecommendation"
+        },
+        "stateName": {
+          "description": "Identifies this UiModel to be shown when an option is selected. Corresponds to option.value.target_state (if specified).",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "subtitle": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "subtitleMsg": {
+          "description": null,
+          "$ref": "LocalizableMessage"
+        },
+        "title": {
+          "description": "Localized messages that're shown to the user",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "titleMsg": {
+          "description": null,
+          "$ref": "LocalizableMessage"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "NotificationUiModelButton": {
+      "id": "NotificationUiModelButton",
+      "description": "Describes something the user can click to navigate or perform some action.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "action": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "deprecatedDismissAsComplete",
+            "dismiss",
+            "dismissAsAccepted",
+            "dismissAsBlocked",
+            "enableHighAccuracy",
+            "intent",
+            "reengageUser",
+            "saveGoal",
+            "saveOptionGoal",
+            "showNextState",
+            "showTargetState"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "label": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "labelMsg": {
+          "description": null,
+          "$ref": "LocalizableMessage"
+        },
+        "targetState": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "type": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "button",
+            "link"
+          ],
+          "enumDescriptions": [
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "NotificationUiModelGraph": {
+      "id": "NotificationUiModelGraph",
+      "description": "Rendering options for graphs.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "includeLabel": {
+          "description": "Whether or not the data values will be displayed on the graph.",
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "includeLegend": {
+          "description": "Whether or not the domain will be displayed to the side of the graph, aka legend.",
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "rangeMaxExtent": {
+          "description": "Specify the range's max extent to be applied to nicing functions.",
+          "type": "number",
+          "format": "double",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "series": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "NotificationUiModelGraphSeries"
+          }
+        },
+        "style": {
+          "description": "Type of graph/chart to display.",
+          "type": "string",
+          "format": null,
+          "enum": [
+            "horizontalBar",
+            "line",
+            "pie",
+            "stackedHorizontalBar"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "title": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "titleMsg": {
+          "description": "The text to be displayed above this graph.",
+          "$ref": "LocalizableMessage"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "NotificationUiModelGraphSeries": {
+      "id": "NotificationUiModelGraphSeries",
+      "description": "A set of data. NOTE: Our current UX specs require only a single series.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "name": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "nameMsg": {
+          "description": null,
+          "$ref": "LocalizableMessage"
+        },
+        "point": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "NotificationUiModelGraphSeriesPlotPoint"
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "NotificationUiModelGraphSeriesPlotPoint": {
+      "id": "NotificationUiModelGraphSeriesPlotPoint",
+      "description": "Single datum.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "color": {
+          "description": null,
+          "type": "integer",
+          "format": "int32",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "domain": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "domainMsg": {
+          "description": "Domains contribute to labels and legends.",
+          "$ref": "LocalizableMessage"
+        },
+        "range": {
+          "description": null,
+          "type": "number",
+          "format": "double",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "NotificationUiModelIntent": {
+      "id": "NotificationUiModelIntent",
+      "description": "Links to specific places within the clients. Pairs with the INTENT button action. Intents should have a location or a url but not both.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "location": {
+          "description": "A feature screen in the client.",
+          "type": "string",
+          "format": null,
+          "enum": [
+            "googleFitData",
+            "myProfile",
+            "playStore",
+            "settings"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "url": {
+          "description": "A web url.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "NotificationUiModelOptions": {
+      "id": "NotificationUiModelOptions",
+      "description": "Options cause UI to be shown giving the user a choice between several options for their goal.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "defaultValueIndex": {
+          "description": "The default option that should be selected by the UI",
+          "type": "integer",
+          "format": "int32",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "value": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "NotificationUiModelOptionsValue"
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "NotificationUiModelOptionsValue": {
+      "id": "NotificationUiModelOptionsValue",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "displayString": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "displayStringMsg": {
+          "description": null,
+          "$ref": "LocalizableMessage"
+        },
+        "recommendation": {
+          "description": null,
+          "$ref": "NotificationUiModelRecommendation"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "NotificationUiModelRecommendation": {
+      "id": "NotificationUiModelRecommendation",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "goalTemplate": {
+          "description": "The details for a new goal if we?re recommending a sub goal or replacement goal.",
+          "$ref": "Goal"
+        },
+        "projectedBenefit": {
+          "description": "A quantified benefit expected to be gained by performing this recommendation (e.g. number of steps toward goal)",
+          "$ref": "NotificationUiModelRecommendationDataValue"
+        },
+        "replacesParentGoal": {
+          "description": "If the goal described in goal_details replaces that identified by parent_goal_id, this should be set to true. If accepted, the parent goal should be cancelled and the contained goal be set in its place.",
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "NotificationUiModelRecommendationDataValue": {
+      "id": "NotificationUiModelRecommendationDataValue",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "dataType": {
+          "description": null,
+          "$ref": "DataType"
+        },
+        "value": {
+          "description": null,
+          "type": "number",
+          "format": "double",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "PersonalRecordCapsuleConfig": {
+      "id": "PersonalRecordCapsuleConfig",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "fitnessActivity": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "Profile": {
+      "id": "Profile",
+      "description": "NextId = 28",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "calorieUnlockTimeMillis": {
+          "description": "Timestamp corresponding to when the user volunteered height, weight and gender info that unlocks calorie data",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "creationTimeMillis": {
+          "description": null,
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "distanceUnitPref": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "imperial",
+            "metric",
+            "unknownLengthUnit"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "distanceUnlockTimeMillis": {
+          "description": "Timestamp corresponding to when the user volunteered height info that unlocks distance data",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "energyUnitPref": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "calorie",
+            "kilojoule",
+            "unknownEnergyUnit"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "favoriteActivities": {
+          "description": "User specified favorite activities",
+          "$ref": "FavoriteActivities"
+        },
+        "favoriteOtherActivities": {
+          "description": "List of up to seven activities to appear at the top of add/edit activity dialogs. Ordered from most recent use to least recent use. Does not include walking, running, and biking which are always at the top.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "type": "string",
+            "format": null,
+            "enum": [],
+            "enumDescriptions": [],
+            "properties": {},
+            "additionalProperties": null,
+            "items": null
+          }
+        },
+        "gender": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "female",
+            "male",
+            "other",
+            "unknownGender"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "heightMeters": {
+          "description": null,
+          "type": "number",
+          "format": "double",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "heightUnitPref": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "imperial",
+            "metric",
+            "unknownLengthUnit"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "isInternalUser": {
+          "description": null,
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "notificationSetting": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "ProfileNotificationSetting"
+          }
+        },
+        "onboardComplete": {
+          "description": null,
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "startOfWeekPref": {
+          "description": "Indicates the day of the week on which to start a week.",
+          "type": "string",
+          "format": null,
+          "enum": [
+            "dayOfWeekUnspecified",
+            "friday",
+            "monday",
+            "saturday",
+            "sunday",
+            "thursday",
+            "tuesday",
+            "wednesday"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "weightKg": {
+          "description": null,
+          "type": "number",
+          "format": "double",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "weightUnitPref": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "kilogram",
+            "pound",
+            "stone",
+            "unknownWeightUnit"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "ProfileNotificationSetting": {
+      "id": "ProfileNotificationSetting",
+      "description": "For recording user preferences for individual notification types.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "blocked": {
+          "description": null,
+          "type": "boolean",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "sourceDescription": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "sourceName": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "sourceTitle": {
+          "description": "Title/description are used in the blocked notifications UI.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "SingleMetricCapsuleConfig": {
+      "id": "SingleMetricCapsuleConfig",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "fitnessActivity": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "metricView": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "distance",
+            "duration",
+            "energy",
+            "step",
+            "unknown"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "timeInterval": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "daily",
+            "monthly",
+            "unknownTimeInterval",
+            "weekly",
+            "yearly"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "TimelineSession": {
+      "id": "TimelineSession",
+      "description": "next id: 28",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "activityInfo": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "TimelineSessionActivityInfo"
+          }
+        },
+        "calories": {
+          "description": null,
+          "type": "number",
+          "format": "float",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "description": {
+          "description": "A description for this session.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "durationMillis": {
+          "description": "The summation of the represented activity segments.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "endTimeMillis": {
+          "description": "The time the last activity segment ended.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "id": {
+          "description": "A unique identifier for a session within the user?s account. Simply a concatenation of the start and end time millis, separated by a '-'.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "location": {
+          "description": null,
+          "$ref": "TimelineSessionLocation"
+        },
+        "name": {
+          "description": "A human readable name of the session.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "property": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "type": "string",
+            "format": null,
+            "enum": [
+              "detectedSportsSession",
+              "exceedsBaseline",
+              "external",
+              "filler",
+              "insignificant",
+              "stronglyExceedsBaseline"
+            ],
+            "enumDescriptions": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "properties": {},
+            "additionalProperties": null,
+            "items": null
+          }
+        },
+        "segment": {
+          "description": "The segments that make up the activity.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "TimelineSessionSegment"
+          }
+        },
+        "startTimeMillis": {
+          "description": "The time the first activity segment started.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "TimelineSessionActivityInfo": {
+      "id": "TimelineSessionActivityInfo",
+      "description": "Data that is needed on a per-activity basis.",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "calories": {
+          "description": "Calories associated with the activity.",
+          "type": "number",
+          "format": "float",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "durationMillis": {
+          "description": "The duration of this activity type within the session.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "fitnessActivity": {
+          "description": "The ActivityType and raw detected activities that grouped into this Info.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "property": {
+          "description": "Properties about this activity type that the UI can use to make decisions about hiding or showing this session.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "type": "string",
+            "format": null,
+            "enum": [
+              "detectedSportsSession",
+              "exceedsBaseline",
+              "external",
+              "filler",
+              "insignificant",
+              "stronglyExceedsBaseline"
+            ],
+            "enumDescriptions": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "properties": {},
+            "additionalProperties": null,
+            "items": null
+          }
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "TimelineSessionLocation": {
+      "id": "TimelineSessionLocation",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "deprecatedField": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "latMax": {
+          "description": null,
+          "type": "number",
+          "format": "float",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "latMin": {
+          "description": "The bounding box.",
+          "type": "number",
+          "format": "float",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "longMax": {
+          "description": null,
+          "type": "number",
+          "format": "float",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "longMin": {
+          "description": null,
+          "type": "number",
+          "format": "float",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "pathError": {
+          "description": "Issues with the path. You should not show the path in the UX if it has any errors.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "type": "string",
+            "format": null,
+            "enum": [
+              "areaTooDense",
+              "distanceNotSupported",
+              "highTeleportRate",
+              "samplingRateTooLow",
+              "tooManyGaps"
+            ],
+            "enumDescriptions": [
+              "",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "properties": {},
+            "additionalProperties": null,
+            "items": null
+          }
+        },
+        "placeId": {
+          "description": "This is the GMS PlaceId that can be used to look up details of this location.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "samplingRate": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [
+            "high",
+            "low",
+            "medium"
+          ],
+          "enumDescriptions": [
+            "",
+            "",
+            ""
+          ],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "TimelineSessionSegment": {
+      "id": "TimelineSessionSegment",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "endTimeMillis": {
+          "description": "The time the last activity segment ended.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "fitnessActivity": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "startTimeMillis": {
+          "description": "The time the first activity segment started.",
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "UpdateGoalV2Request": {
+      "id": "UpdateGoalV2Request",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "newGoal": {
+          "description": null,
+          "$ref": "GoalV2"
+        },
+        "oldGoal": {
+          "description": null,
+          "$ref": "GoalV2"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "ValidateChecksumRequest": {
+      "id": "ValidateChecksumRequest",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "container": {
+          "description": null,
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "ChecksumChunkContainer"
+          }
+        },
+        "elapsedTimeMillis": {
+          "description": null,
+          "type": "string",
+          "format": "int64",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "Value": {
+      "id": "Value",
+      "description": "Holder object for the value of a single field in a data point.\n\nA field value has a particular format and is only ever set to one of an integer or a floating point value. LINT.IfChange",
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "blob": {
+          "description": null,
+          "type": "string",
+          "format": "byte",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "fpVal": {
+          "description": "Floating point value. When this is set, other values must not be set.",
+          "type": "number",
+          "format": "double",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "intVal": {
+          "description": "Integer value. When this is set, other values must not be set.",
+          "type": "integer",
+          "format": "int32",
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "mapVal": {
+          "description": "Map value. The valid key space and units for the corresponding value of each entry should be documented as part of the data type definition. Keys should be kept small whenever possible. Data streams with large keys and high data frequency may be down sampled.",
+          "type": "array",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": {
+            "$ref": "ValueMapValEntry"
+          }
+        },
+        "stringVal": {
+          "description": "String value. When this is set, other values must not be set. Strings should be kept small whenever possible. Data streams with large string values and high data frequency may be down sampled.",
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    },
+    "ValueMapValEntry": {
+      "id": "ValueMapValEntry",
+      "description": null,
+      "type": "object",
+      "format": null,
+      "enum": [],
+      "enumDescriptions": [],
+      "properties": {
+        "key": {
+          "description": null,
+          "type": "string",
+          "format": null,
+          "enum": [],
+          "enumDescriptions": [],
+          "properties": {},
+          "additionalProperties": null,
+          "items": null
+        },
+        "value": {
+          "description": null,
+          "$ref": "MapValue"
+        }
+      },
+      "additionalProperties": null,
+      "items": null
+    }
+  },
+  "resources": {
+    "fitnessAppPrivate": {
+      "resources": {},
+      "methods": {
+        "gettimelinedata": {
+          "id": "fitness_internal.fitnessAppPrivate.gettimelinedata",
+          "path": "fitnessAppPrivate/gettimelinedata",
+          "httpMethod": "POST",
+          "description": "Get data for display in the web frontend.",
+          "parameters": {},
+          "parameterOrder": [],
+          "request": {
+            "$ref": "GetTimelineDataRequest"
+          },
+          "response": null,
+          "scopes": [],
+          "supportsMediaDownload": false,
+          "useMediaDownloadService": false,
+          "supportsSubscription": false,
+          "supportsMediaUpload": false,
+          "mediaUpload": null
+        }
+      }
+    },
+    "users": {
+      "resources": {
+        "capsules": {
+          "resources": {},
+          "methods": {
+            "delete": {
+              "id": "fitness_internal.users.capsules.delete",
+              "path": "users/{userId}/capsules/{capsuleId}",
+              "httpMethod": "DELETE",
+              "description": "Deletes a capsule",
+              "parameters": {
+                "capsuleId": {
+                  "description": "@required",
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "userId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                }
+              },
+              "parameterOrder": [
+                "userId",
+                "capsuleId"
+              ],
+              "request": null,
+              "response": null,
+              "scopes": [],
+              "supportsMediaDownload": false,
+              "useMediaDownloadService": false,
+              "supportsSubscription": false,
+              "supportsMediaUpload": false,
+              "mediaUpload": null
+            },
+            "list": {
+              "id": "fitness_internal.users.capsules.list",
+              "path": "users/{userId}/capsules",
+              "httpMethod": "GET",
+              "description": "Gets the list of web dashboard capsules.",
+              "parameters": {
+                "shouldInitialize": {
+                  "description": "If there are no capsules, they will be initialized to all available capsules.",
+                  "default": "true",
+                  "location": "query",
+                  "required": false,
+                  "type": "boolean",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "userId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                }
+              },
+              "parameterOrder": [
+                "userId"
+              ],
+              "request": null,
+              "response": {
+                "$ref": "ListCapsulesResponse"
+              },
+              "scopes": [],
+              "supportsMediaDownload": false,
+              "useMediaDownloadService": false,
+              "supportsSubscription": false,
+              "supportsMediaUpload": false,
+              "mediaUpload": null
+            },
+            "update": {
+              "id": "fitness_internal.users.capsules.update",
+              "path": "users/{userId}/capsules/{capsuleId}",
+              "httpMethod": "PUT",
+              "description": "Updates a capsule",
+              "parameters": {
+                "capsuleId": {
+                  "description": "@required",
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "userId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                }
+              },
+              "parameterOrder": [
+                "userId",
+                "capsuleId"
+              ],
+              "request": {
+                "$ref": "Capsule"
+              },
+              "response": {
+                "$ref": "Capsule"
+              },
+              "scopes": [],
+              "supportsMediaDownload": false,
+              "useMediaDownloadService": false,
+              "supportsSubscription": false,
+              "supportsMediaUpload": false,
+              "mediaUpload": null
+            }
+          }
+        },
+        "goals": {
+          "resources": {},
+          "methods": {
+            "create": {
+              "id": "fitness_internal.users.goals.create",
+              "path": "users/{userId}/goals",
+              "httpMethod": "POST",
+              "description": null,
+              "parameters": {
+                "userId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                }
+              },
+              "parameterOrder": [
+                "userId"
+              ],
+              "request": {
+                "$ref": "Goal"
+              },
+              "response": {
+                "$ref": "Goal"
+              },
+              "scopes": [],
+              "supportsMediaDownload": false,
+              "useMediaDownloadService": false,
+              "supportsSubscription": false,
+              "supportsMediaUpload": false,
+              "mediaUpload": null
+            },
+            "list": {
+              "id": "fitness_internal.users.goals.list",
+              "path": "users/{userId}/goals",
+              "httpMethod": "GET",
+              "description": null,
+              "parameters": {
+                "changedSinceMillis": {
+                  "description": null,
+                  "default": null,
+                  "location": "query",
+                  "required": false,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "includeCancelled": {
+                  "description": null,
+                  "default": "false",
+                  "location": "query",
+                  "required": false,
+                  "type": "boolean",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "includeCompleted": {
+                  "description": null,
+                  "default": "false",
+                  "location": "query",
+                  "required": false,
+                  "type": "boolean",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "userId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                }
+              },
+              "parameterOrder": [
+                "userId"
+              ],
+              "request": null,
+              "response": {
+                "$ref": "ListGoalsResponse"
+              },
+              "scopes": [],
+              "supportsMediaDownload": false,
+              "useMediaDownloadService": false,
+              "supportsSubscription": false,
+              "supportsMediaUpload": false,
+              "mediaUpload": null
+            },
+            "update": {
+              "id": "fitness_internal.users.goals.update",
+              "path": "users/{userId}/goals/{goalId}",
+              "httpMethod": "PUT",
+              "description": null,
+              "parameters": {
+                "goalId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "userId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                }
+              },
+              "parameterOrder": [
+                "userId",
+                "goalId"
+              ],
+              "request": {
+                "$ref": "Goal"
+              },
+              "response": {
+                "$ref": "Goal"
+              },
+              "scopes": [],
+              "supportsMediaDownload": false,
+              "useMediaDownloadService": false,
+              "supportsSubscription": false,
+              "supportsMediaUpload": false,
+              "mediaUpload": null
+            }
+          }
+        },
+        "goalsv2": {
+          "resources": {},
+          "methods": {
+            "create": {
+              "id": "fitness_internal.users.goalsv2.create",
+              "path": "users/{userId}/goalsv2",
+              "httpMethod": "POST",
+              "description": "Create a goalv2",
+              "parameters": {
+                "userId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                }
+              },
+              "parameterOrder": [
+                "userId"
+              ],
+              "request": {
+                "$ref": "GoalV2"
+              },
+              "response": {
+                "$ref": "GoalV2"
+              },
+              "scopes": [],
+              "supportsMediaDownload": false,
+              "useMediaDownloadService": false,
+              "supportsSubscription": false,
+              "supportsMediaUpload": false,
+              "mediaUpload": null
+            },
+            "list": {
+              "id": "fitness_internal.users.goalsv2.list",
+              "path": "users/{userId}/goalsv2",
+              "httpMethod": "GET",
+              "description": "Calls Glycogen to get a list of all active V2 goals.",
+              "parameters": {
+                "userId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                }
+              },
+              "parameterOrder": [
+                "userId"
+              ],
+              "request": null,
+              "response": {
+                "$ref": "ListGoalsV2Response"
+              },
+              "scopes": [],
+              "supportsMediaDownload": false,
+              "useMediaDownloadService": false,
+              "supportsSubscription": false,
+              "supportsMediaUpload": false,
+              "mediaUpload": null
+            },
+            "updateCancel": {
+              "id": "fitness_internal.users.goalsv2.updateCancel",
+              "path": "users/{userId}/goalsv2/cancel",
+              "httpMethod": "PUT",
+              "description": "Cancel a goalv2",
+              "parameters": {
+                "cancelTimeNanos": {
+                  "description": "New effective end time of the goal, defaults to now if unset.",
+                  "default": null,
+                  "location": "query",
+                  "required": false,
+                  "type": "string",
+                  "format": "int64",
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "userId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                }
+              },
+              "parameterOrder": [
+                "userId"
+              ],
+              "request": {
+                "$ref": "GoalV2"
+              },
+              "response": null,
+              "scopes": [],
+              "supportsMediaDownload": false,
+              "useMediaDownloadService": false,
+              "supportsSubscription": false,
+              "supportsMediaUpload": false,
+              "mediaUpload": null
+            },
+            "updateCancelCreate": {
+              "id": "fitness_internal.users.goalsv2.updateCancelCreate",
+              "path": "users/{userId}/goalsv2/cancelCreate",
+              "httpMethod": "PUT",
+              "description": "Cancel a goalv2 and create another goalv2",
+              "parameters": {
+                "userId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                }
+              },
+              "parameterOrder": [
+                "userId"
+              ],
+              "request": {
+                "$ref": "UpdateGoalV2Request"
+              },
+              "response": {
+                "$ref": "GoalV2"
+              },
+              "scopes": [],
+              "supportsMediaDownload": false,
+              "useMediaDownloadService": false,
+              "supportsSubscription": false,
+              "supportsMediaUpload": false,
+              "mediaUpload": null
+            }
+          }
+        },
+        "notifications": {
+          "resources": {},
+          "methods": {
+            "create": {
+              "id": "fitness_internal.users.notifications.create",
+              "path": "users/{userId}/notifications",
+              "httpMethod": "POST",
+              "description": null,
+              "parameters": {
+                "userId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                }
+              },
+              "parameterOrder": [
+                "userId"
+              ],
+              "request": {
+                "$ref": "Notification"
+              },
+              "response": {
+                "$ref": "Notification"
+              },
+              "scopes": [],
+              "supportsMediaDownload": false,
+              "useMediaDownloadService": false,
+              "supportsSubscription": false,
+              "supportsMediaUpload": false,
+              "mediaUpload": null
+            },
+            "getStatus": {
+              "id": "fitness_internal.users.notifications.getStatus",
+              "path": "users/{userId}/notifications/{notificationId}/status",
+              "httpMethod": "GET",
+              "description": null,
+              "parameters": {
+                "notificationId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "userId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                }
+              },
+              "parameterOrder": [
+                "userId",
+                "notificationId"
+              ],
+              "request": null,
+              "response": {
+                "$ref": "NotificationStatus"
+              },
+              "scopes": [],
+              "supportsMediaDownload": false,
+              "useMediaDownloadService": false,
+              "supportsSubscription": false,
+              "supportsMediaUpload": false,
+              "mediaUpload": null
+            },
+            "list": {
+              "id": "fitness_internal.users.notifications.list",
+              "path": "users/{userId}/notifications",
+              "httpMethod": "GET",
+              "description": "Returns all notifications for a user. If the 'status' parameter is set, only the notifications with a matching status will be returned.",
+              "parameters": {
+                "forceGenerateSourceNames": {
+                  "description": null,
+                  "default": null,
+                  "location": "query",
+                  "required": false,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": true
+                },
+                "includeStoredNotifications": {
+                  "description": "if set, also returns all notifications that have been acted upon by user",
+                  "default": null,
+                  "location": "query",
+                  "required": false,
+                  "type": "boolean",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "locale": {
+                  "description": "TODO(ricebin): deprecate; use header.accept_language",
+                  "default": null,
+                  "location": "query",
+                  "required": false,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "status": {
+                  "description": null,
+                  "default": null,
+                  "location": "query",
+                  "required": false,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [
+                    "accepted",
+                    "blocked",
+                    "deprecatedComplete",
+                    "dismissed",
+                    "localOnly",
+                    "noStatus",
+                    "systemCancel",
+                    "visible"
+                  ],
+                  "enumDescriptions": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "repeated": false
+                },
+                "userId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                }
+              },
+              "parameterOrder": [
+                "userId"
+              ],
+              "request": null,
+              "response": {
+                "$ref": "ListNotificationsResponse"
+              },
+              "scopes": [],
+              "supportsMediaDownload": false,
+              "useMediaDownloadService": false,
+              "supportsSubscription": false,
+              "supportsMediaUpload": false,
+              "mediaUpload": null
+            },
+            "update": {
+              "id": "fitness_internal.users.notifications.update",
+              "path": "users/{userId}/notifications/{notificationId}",
+              "httpMethod": "PUT",
+              "description": null,
+              "parameters": {
+                "notificationId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "userId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                }
+              },
+              "parameterOrder": [
+                "userId",
+                "notificationId"
+              ],
+              "request": {
+                "$ref": "Notification"
+              },
+              "response": {
+                "$ref": "Notification"
+              },
+              "scopes": [],
+              "supportsMediaDownload": false,
+              "useMediaDownloadService": false,
+              "supportsSubscription": false,
+              "supportsMediaUpload": false,
+              "mediaUpload": null
+            },
+            "updateRecordUserAction": {
+              "id": "fitness_internal.users.notifications.updateRecordUserAction",
+              "path": "users/{userId}/notifications/{notificationId}/recordUserAction",
+              "httpMethod": "PUT",
+              "description": null,
+              "parameters": {
+                "notificationId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "userId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                }
+              },
+              "parameterOrder": [
+                "userId",
+                "notificationId"
+              ],
+              "request": {
+                "$ref": "NotificationStatus"
+              },
+              "response": null,
+              "scopes": [],
+              "supportsMediaDownload": false,
+              "useMediaDownloadService": false,
+              "supportsSubscription": false,
+              "supportsMediaUpload": false,
+              "mediaUpload": null
+            }
+          }
+        },
+        "notifications_v2": {
+          "resources": {},
+          "methods": {
+            "list": {
+              "id": "fitness_internal.users.notifications_v2.list",
+              "path": "users/{userId}/notifications_v2",
+              "httpMethod": "GET",
+              "description": "Called by Comaneci and newer clients.",
+              "parameters": {
+                "forceGenerateSourceNames": {
+                  "description": null,
+                  "default": null,
+                  "location": "query",
+                  "required": false,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": true
+                },
+                "includeStoredNotifications": {
+                  "description": "if set, also returns all notifications that have been acted upon by user",
+                  "default": null,
+                  "location": "query",
+                  "required": false,
+                  "type": "boolean",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "locale": {
+                  "description": "TODO(ricebin): deprecate; use header.accept_language",
+                  "default": null,
+                  "location": "query",
+                  "required": false,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "status": {
+                  "description": null,
+                  "default": null,
+                  "location": "query",
+                  "required": false,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [
+                    "accepted",
+                    "blocked",
+                    "deprecatedComplete",
+                    "dismissed",
+                    "localOnly",
+                    "noStatus",
+                    "systemCancel",
+                    "visible"
+                  ],
+                  "enumDescriptions": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "repeated": false
+                },
+                "userId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                }
+              },
+              "parameterOrder": [
+                "userId"
+              ],
+              "request": null,
+              "response": {
+                "$ref": "ListNotificationsResponse"
+              },
+              "scopes": [],
+              "supportsMediaDownload": false,
+              "useMediaDownloadService": false,
+              "supportsSubscription": false,
+              "supportsMediaUpload": false,
+              "mediaUpload": null
+            }
+          }
+        },
+        "sessions": {
+          "resources": {},
+          "methods": {
+            "list": {
+              "id": "fitness_internal.users.sessions.list",
+              "path": "users/{userId}/sessions",
+              "httpMethod": "GET",
+              "description": null,
+              "parameters": {
+                "annotationDataStreamId": {
+                  "description": null,
+                  "default": null,
+                  "location": "query",
+                  "required": false,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": true
+                },
+                "annotationDataType": {
+                  "description": "DEPRECATED, any values supplied will be ignored. see NonBucketingSessionAnnotator or BucketingSessionAnnotator for supported DataTypes com.google.step_count.delta com.google.calories.expended com.google.distance.delta com.google.heart_rate.bpm",
+                  "default": null,
+                  "location": "query",
+                  "required": false,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": true
+                },
+                "deprecatedIncludePostFillerSessions": {
+                  "description": null,
+                  "default": null,
+                  "location": "query",
+                  "required": false,
+                  "type": "boolean",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "deprecatedIncludePreFillerSessions": {
+                  "description": "DEPRECATED, will always default to true.",
+                  "default": null,
+                  "location": "query",
+                  "required": false,
+                  "type": "boolean",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "endTimeMillis": {
+                  "description": "@required",
+                  "default": null,
+                  "location": "query",
+                  "required": false,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "languageCode": {
+                  "description": "DEPRECATED, any value supplied will be ignored.",
+                  "default": null,
+                  "location": "query",
+                  "required": false,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "startTimeMillis": {
+                  "description": "@required",
+                  "default": null,
+                  "location": "query",
+                  "required": false,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "userId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                }
+              },
+              "parameterOrder": [
+                "userId"
+              ],
+              "request": null,
+              "response": {
+                "$ref": "ListSessionsResponse"
+              },
+              "scopes": [],
+              "supportsMediaDownload": false,
+              "useMediaDownloadService": false,
+              "supportsSubscription": false,
+              "supportsMediaUpload": false,
+              "mediaUpload": null
+            },
+            "updateEdit": {
+              "id": "fitness_internal.users.sessions.updateEdit",
+              "path": "users/{userId}/sessions/edit",
+              "httpMethod": "PUT",
+              "description": "Deletes sessions (from Glycogen) and segments and inserts new.",
+              "parameters": {
+                "endTimeMillis": {
+                  "description": "@required",
+                  "default": null,
+                  "location": "query",
+                  "required": false,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "hide": {
+                  "description": null,
+                  "default": null,
+                  "location": "query",
+                  "required": false,
+                  "type": "boolean",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "startTimeMillis": {
+                  "description": "@required",
+                  "default": null,
+                  "location": "query",
+                  "required": false,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                },
+                "userId": {
+                  "description": null,
+                  "default": null,
+                  "location": "path",
+                  "required": true,
+                  "type": "string",
+                  "format": null,
+                  "minimum": null,
+                  "maximum": null,
+                  "pattern": null,
+                  "enum": [],
+                  "enumDescriptions": [],
+                  "repeated": false
+                }
+              },
+              "parameterOrder": [
+                "userId"
+              ],
+              "request": {
+                "$ref": "TimelineSession"
+              },
+              "response": null,
+              "scopes": [],
+              "supportsMediaDownload": false,
+              "useMediaDownloadService": false,
+              "supportsSubscription": false,
+              "supportsMediaUpload": false,
+              "mediaUpload": null
+            }
+          }
+        }
+      },
+      "methods": {
+        "checksum": {
+          "id": "fitness_internal.users.checksum",
+          "path": "users/{userId}/checksum",
+          "httpMethod": "POST",
+          "description": "Validate checksums",
+          "parameters": {
+            "userId": {
+              "description": null,
+              "default": null,
+              "location": "path",
+              "required": true,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            }
+          },
+          "parameterOrder": [
+            "userId"
+          ],
+          "request": {
+            "$ref": "ValidateChecksumRequest"
+          },
+          "response": null,
+          "scopes": [],
+          "supportsMediaDownload": false,
+          "useMediaDownloadService": false,
+          "supportsSubscription": false,
+          "supportsMediaUpload": false,
+          "mediaUpload": null
+        },
+        "getProfile": {
+          "id": "fitness_internal.users.getProfile",
+          "path": "users/{userId}/profile",
+          "httpMethod": "GET",
+          "description": null,
+          "parameters": {
+            "userId": {
+              "description": null,
+              "default": null,
+              "location": "path",
+              "required": true,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            }
+          },
+          "parameterOrder": [
+            "userId"
+          ],
+          "request": null,
+          "response": {
+            "$ref": "Profile"
+          },
+          "scopes": [],
+          "supportsMediaDownload": false,
+          "useMediaDownloadService": false,
+          "supportsSubscription": false,
+          "supportsMediaUpload": false,
+          "mediaUpload": null
+        },
+        "updateDeleteHistory": {
+          "id": "fitness_internal.users.updateDeleteHistory",
+          "path": "users/{userId}/deleteHistory",
+          "httpMethod": "PUT",
+          "description": null,
+          "parameters": {
+            "alsoDeletePlatformData": {
+              "description": null,
+              "default": "true",
+              "location": "query",
+              "required": false,
+              "type": "boolean",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "endTimeMillis": {
+              "description": "Deprecated. This field doesn't have any effect on history deletion.",
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "startTimeMillis": {
+              "description": "Deprecated. This field doesn't have any effect on history deletion.",
+              "default": null,
+              "location": "query",
+              "required": false,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "userId": {
+              "description": null,
+              "default": null,
+              "location": "path",
+              "required": true,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            }
+          },
+          "parameterOrder": [
+            "userId"
+          ],
+          "request": null,
+          "response": null,
+          "scopes": [],
+          "supportsMediaDownload": false,
+          "useMediaDownloadService": false,
+          "supportsSubscription": false,
+          "supportsMediaUpload": false,
+          "mediaUpload": null
+        },
+        "updateOnboardNewUser": {
+          "id": "fitness_internal.users.updateOnboardNewUser",
+          "path": "users/{userId}/onboardNewUser",
+          "httpMethod": "PUT",
+          "description": null,
+          "parameters": {
+            "createDefaultGoal": {
+              "description": null,
+              "default": "true",
+              "location": "query",
+              "required": false,
+              "type": "boolean",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            },
+            "userId": {
+              "description": null,
+              "default": null,
+              "location": "path",
+              "required": true,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            }
+          },
+          "parameterOrder": [
+            "userId"
+          ],
+          "request": {
+            "$ref": "Profile"
+          },
+          "response": {
+            "$ref": "Profile"
+          },
+          "scopes": [],
+          "supportsMediaDownload": false,
+          "useMediaDownloadService": false,
+          "supportsSubscription": false,
+          "supportsMediaUpload": false,
+          "mediaUpload": null
+        },
+        "updateProfile": {
+          "id": "fitness_internal.users.updateProfile",
+          "path": "users/{userId}/profile",
+          "httpMethod": "PUT",
+          "description": null,
+          "parameters": {
+            "userId": {
+              "description": null,
+              "default": null,
+              "location": "path",
+              "required": true,
+              "type": "string",
+              "format": null,
+              "minimum": null,
+              "maximum": null,
+              "pattern": null,
+              "enum": [],
+              "enumDescriptions": [],
+              "repeated": false
+            }
+          },
+          "parameterOrder": [
+            "userId"
+          ],
+          "request": {
+            "$ref": "Profile"
+          },
+          "response": {
+            "$ref": "Profile"
+          },
+          "scopes": [],
+          "supportsMediaDownload": false,
+          "useMediaDownloadService": false,
+          "supportsSubscription": false,
+          "supportsMediaUpload": false,
+          "mediaUpload": null
+        }
+      }
+    }
+  },
+  "methods": {}
+}
